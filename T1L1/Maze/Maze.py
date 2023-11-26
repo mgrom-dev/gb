@@ -1,4 +1,4 @@
-#pip install Pillow numpy
+#pip install Pillow
 from PIL import Image
 import turtle
 
