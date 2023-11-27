@@ -8,5 +8,5 @@
 
 ----------
 ### Используемые материалы ###
-https://app.diagrams.net/ - создание блок-схем
-https://www.notion.so/
+- https://app.diagrams.net/ - создание блок-схем
+- https://www.notion.so/
