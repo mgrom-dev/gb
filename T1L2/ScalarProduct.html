@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+        <style>
+            body {
+                text-align: center;
+            }
+            table {
+                display: inline-block;
+            }
+            tr {
+                text-align: center;
+            }
+        </style>
+        <title>Скалярное произведение векторов</title>
+        <script>
+            function calculate(){
+                var vectors = [...document.querySelectorAll("input")].map(i => i.value.split(",").map(n => +n)),
+                    result = document.querySelector("tr:last-child > td"),
+                    scalarProduct = 0;
+                if (vectors[0].length != vectors[1].length) {
+                    result.innerHTML = "Результат:<br>Ошибка! Векторы разной размерности.";
+                    return false;
+                }
+                for (var i = 0; i < vectors[0].length; i++) {
+                    if (isNaN(vectors[0][i]) || isNaN(vectors[1][i])) {
+                        result.innerHTML = "Результат:<br>Ошибка! Не правильное значение векторов.<br>Введите значения через запятую.";
+                        return false;
+                    }
+                    scalarProduct += vectors[0][i] * vectors[1][i];
+                }
+                result.innerHTML = `Результат:<br>Скалярное произведение векторов равно ${scalarProduct}`;
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <caption>Вычисление скалярного произведения векторов.<br>Введите значения векторов через запятую</caption>
+            <tr>
+                <td>Первый вектор:</td>
+                <td><input type="text" size="20" value="1,8"></div></td>
+            </tr>
+            <tr>
+                <td>Второй вектор:</td>
+                <td><input type="text" size="20" value="6,3"></div></td>
+            </tr>
+            <tr><td colspan="2"><button onclick="calculate()">Вычислить</button></td></tr>
+            <tr><td colspan="2">Результат:</td></tr>
+        </table>
+    </body>
+</html>
