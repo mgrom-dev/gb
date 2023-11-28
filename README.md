@@ -9,4 +9,5 @@
 ----------
 ### Используемые материалы ###
 - https://app.diagrams.net/ - создание блок-схем
-- https://www.notion.so/
+- https://www.notion.so/ - облако знаний
+- https://obsidian.md/ - облако знаний
