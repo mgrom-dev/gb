@@ -16,13 +16,29 @@ while distance > 10:
     distance = distance - (firstFriendSpeed + secondFriendSpeed) * time
     count += 1
 
-print('Если друзья идут навстречу друг другу, то собака пробежит', count, 'раз')
+print('По предложенному алгоритму решения задачи из лекции: если друзья идут навстречу друг другу, то собака пробежит', count, 'раз')
 
 count = 0
 distance = 10_000
-friend = 2
+distanceDog = 0
+while distance > 10:
+    distance -= firstFriendSpeed + secondFriendSpeed
+    distanceDog += dogSpeed
+    if distanceDog >= distance:
+        count += 1
+        distanceDog = 0
+
+print('По более правильному алгоритму: если друзья идут навстречу друг другу, то собака пробежит', count, 'раз')
+
+count = 0
+distance = 10_000
+distanceDog = 0
 
 while distance > 10:
-    distance = 0
+    distance -= secondFriendSpeed - firstFriendSpeed
+    distanceDog += dogSpeed
+    if distanceDog >= distance:
+            count += 1
+            distanceDog = 0
 
 print('Если друзья идут в одну сторону, то собака пробежит', count, 'раз')
