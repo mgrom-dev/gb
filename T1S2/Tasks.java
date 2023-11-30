@@ -4,8 +4,8 @@ import java.util.Random;
 public class Tasks {
     /** класс под минимальное и максимальное целое значение */
     public static class MinMaxIndex {
-        Integer min;
-        Integer max;
+        int min;
+        int max;
 
         public MinMaxIndex(Integer min, Integer max) {
             this.min = min;
@@ -24,9 +24,14 @@ public class Tasks {
         System.out.println(String.format("Домашнее задание 1. Задан массив %s размером %d элементов\nИндекс минимального значения в массиве %d\nИндекс максимального значения в массиве %d", 
            arrayToString(minMaxArray), minMaxArray.length, minMaxIndex.min, minMaxIndex.max));
 
-        Integer[] revertArray = Arrays.stream( new Random().ints(11, 0, 100).toArray() ).boxed().toArray( Integer[]::new );
         System.out.println(String.format("Домашнее задание 2. Задан массив %s размером %d элементов\nМассив в обратном порядке %s", 
-           arrayToString(revertArray), revertArray.length, arrayToString(revert(revertArray))));
+           arrayToString(minMaxArray), minMaxArray.length, arrayToString(revert(minMaxArray))));
+
+        System.out.println(String.format("Домашнее задание 3. Задан массив %s размером %d элементов\nСумма элементов массива, лежащих между максимальным и минимальным по значению элементами, равна: %d", 
+           arrayToString(minMaxArray), minMaxArray.length, summAboveMinAndMaxArray(minMaxArray)));
+
+        System.out.println(String.format("Домашнее задание 4. Задан массив %s размером %d элементов\nCреднее арифметическое среди всех элементов массива: %.1f", 
+           arrayToString(minMaxArray), minMaxArray.length, average(minMaxArray)));
     }
 
     /**
@@ -91,5 +96,45 @@ public class Tasks {
             array[array.length - i - 1] = tmp;
         }
         return array;
+    }
+
+    /**
+     * Cумма элементов массива, лежащих между максимальным и минимальным по значению элементами
+     * @param array - массив целых чисел
+     * @return - сумма
+     */
+    public static int summAboveMinAndMaxArray(Integer[] array) {
+        int summ = 0;
+        MinMaxIndex indexes = new MinMaxIndex(0, 0);
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > array[indexes.max]) {
+                indexes.max = i;
+            }
+            if (array[i] < array[indexes.min]) {
+                indexes.min = i;
+            }
+        }
+        if (indexes.min > indexes.max) {
+            int temp = indexes.min;
+            indexes.min = indexes.max;
+            indexes.max = temp;
+        }
+        for (int i = indexes.min + 1; i < indexes.max; i++) {
+            summ += array[i];
+        }
+        return summ;
+    }
+
+    /**
+     * Среднее арифметическое среди всех элементов массива
+     * @param array - массив целых чисел
+     * @return - среднее значение
+     */
+    public static double average(Integer[] array) {
+        int summ = 0;
+        for (int i = 0; i < array.length; i++) {
+            summ += array[i];
+        }
+        return (double) summ / array.length;
     }
 }
