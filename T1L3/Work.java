@@ -1,7 +1,7 @@
 public class Work {
     public static void main(String[] args) {
         int[] array = new int[10];
-        int maxNumberInOrder = 2;
+        int maxNumberInOrder = 4;
         String message = "В массиве: ";
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 100);
@@ -23,19 +23,26 @@ public class Work {
     }
 
     public static int findMaxValueInIntArray(int[] array, int maxNumberInOrder) {
-        int maxNumber = 0;
         int size = array.length;
-        for (int repeat = 0; repeat < maxNumberInOrder; repeat++) {
-            int maxNumberIndex = 0;
-            for (int i = 0; i < size; i++) {
-                if (array[i] > array[maxNumberIndex]) {
-                    maxNumberIndex = i;
+        if (size < maxNumberInOrder) {
+            return -1;
+        }
+        int[] maxNumbers = new int[maxNumberInOrder];
+        for (int i = 0; i < size; i++) {
+            int temp = -1;
+            for (int y = maxNumberInOrder - 1; y >= 0; y--) {
+                if (temp != -1) {
+                    int temp2 = maxNumbers[y];
+                    maxNumbers[y] = temp;
+                    temp = temp2;
+                }
+                if (maxNumbers[y] < array[i] && temp == -1) {
+                    temp = maxNumbers[y];
+                    maxNumbers[y] = array[i];
                 }
             }
-            maxNumber = array[maxNumberIndex];
-            array[maxNumberIndex] = 0;
         }
-        return maxNumber;
+        return maxNumbers[0];
     }
 
     public static int findMaxValueInIntArray(int[] array) {
