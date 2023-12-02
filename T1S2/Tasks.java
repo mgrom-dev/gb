@@ -136,6 +136,9 @@ public class Tasks {
         System.out.println(String.format("\nДомашнее задание 3. Задан массив %s размером %d элементов\nСумма элементов массива, лежащих между максимальным и минимальным по значению элементами, равна: %d", 
            arrayToString(minMaxArray), minMaxArray.length, summAboveMinAndMaxArray(minMaxArray)));
 
+        System.out.println(String.format("\nДомашнее задание 3. Задан массив %s размером %d элементов\nАльтернативный алгоритм.\nСумма элементов массива, лежащих между максимальным и минимальным по значению элементами, равна: %d", 
+           arrayToString(minMaxArray), minMaxArray.length, summAboveMinAndMaxArrayAlternate(minMaxArray)));
+
         System.out.println(String.format("\nДомашнее задание 4. Задан массив %s размером %d элементов\nCреднее арифметическое среди всех элементов массива: %.1f\n", 
            arrayToString(minMaxArray), minMaxArray.length, average(minMaxArray)));
     }
@@ -288,6 +291,37 @@ public class Tasks {
         }
         for (int i = indexes.min + 1; i < indexes.max; i++) {
             summ += array[i];
+        }
+        return summ;
+    }
+
+    /**
+     * Cумма элементов массива, лежащих между максимальным и минимальным по значению элементами
+     * Альтернативный метод
+     * @param array - массив целых чисел
+     * @return - сумма
+     */
+    public static int summAboveMinAndMaxArrayAlternate(Integer[] array) {
+        int summ = array[0];
+        int minNumber = array[0];
+        int maxNumber = array[0];
+        int minSumm = array[0];
+        int maxSumm = array[0];
+        for (int i = 1; i < array.length; i++) {
+            summ += array[i];
+            maxSumm += array[i];
+            if (array[i] > maxNumber) {
+                maxNumber = array[i];
+                maxSumm = array[i];
+            }
+            if (array[i] < minNumber) {
+                minNumber = array[i];
+                minSumm = summ;
+            }
+        }
+        summ = summ - maxSumm - minSumm;
+        if (summ < 0) {
+            summ = summ * -1 - minNumber - maxNumber;
         }
         return summ;
     }
