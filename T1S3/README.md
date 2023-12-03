@@ -1,3 +1,5 @@
+Задача 1
+----------
 ![Задача 1](task1.jpg)
 ```
 numbers = [2, -5, 13, -7, 6, -4]
@@ -10,6 +12,7 @@ while (index < size)
     index = index + 1
 print(count)
 ```
+Задача 2
 ----------
 ![Задача 2](task2.jpg)
 ```
@@ -24,6 +27,7 @@ while (index < size)
 avg = sum / size
 print(avg)
 ```
+Задача 3
 ----------
 ![Задача 3](task3.jpg)
 ```
@@ -41,8 +45,15 @@ numbers[max_idx] = numbers[size - 1]
 numbers[size - 1] = max
 print(numbers)
 ```
+Задача 4
 ----------
 ![Задача 4](task4.jpg)
 ![Решение 4 задачи](home4.png)
+Задача 5
 ----------
 ![Задача 5](task5.jpg)
+![Решение 5 задачи](home5.png)
+Задача 6
+----------
+![Задача 6](task6.jpg)
+![Решение 6 задачи](home6.png)
