@@ -17,3 +17,4 @@
 - https://app.diagrams.net/ - создание блок-схем
 - https://www.notion.so/ - облако знаний
 - https://obsidian.md/ - облако знаний
+- https://labs.perplexity.ai/ - AI
