@@ -20,3 +20,4 @@
 - https://www.notion.so/ - облако знаний
 - https://obsidian.md/ - облако знаний
 - https://drive.google.com/file/d/1oM6gS9rVMlnDim8KnLshgSjBByb1OKlG/view?usp=sharing - "Git для профессионального программиста", книга-руководство (Чакон С., Штрауб Б.) [2016 год]
+- https://labs.perplexity.ai/ - AI
