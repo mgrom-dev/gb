@@ -14,10 +14,13 @@
 
 ****T2L1**** - Курс: Введение в контроль версий (лекции) Урок 1. Знакомство с контролем версий
 
+****T2S1**** - Курс: Введение в контроль версий (семинары) Урок 1. Первое использование контроля версий
+
 ----------
 ### Используемые материалы ###
 - https://app.diagrams.net/ - создание блок-схем
 - https://www.notion.so/ - облако знаний
 - https://obsidian.md/ - облако знаний
 - https://drive.google.com/file/d/1oM6gS9rVMlnDim8KnLshgSjBByb1OKlG/view?usp=sharing - "Git для профессионального программиста", книга-руководство (Чакон С., Штрауб Б.) [2016 год]
+- https://learn.microsoft.com/ru-ru/contribute/content/markdown-reference - Справочные материалы по Markdown
 - https://labs.perplexity.ai/ - AI
