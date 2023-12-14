@@ -32,6 +32,12 @@
         <li>* - Урок 3. Работа с удалёнными репозиториями <b>{}</b></li>
     </blockquote>
     </details>
+    <details><summary><u>Ссылки</u></summary><blockquote>
+        <li><a href="https://vimeo.com/showcase/5616060">Видео-скринкасты Git</a></li>
+        <li><a href="https://drive.google.com/file/d/1oM6gS9rVMlnDim8KnLshgSjBByb1OKlG/view?usp=sharing">"Git для профессионального программиста", книга-руководство (Чакон С., Штрауб Б.) [2016 год]</a></li>
+        <li><a href="https://learngitbranching.js.org/?locale=ru_RU">Интерактивный учебник Git</a></li>
+    </blockquote>
+    </details>
     <i>Знакомимся с контролем версии Git (установка, настройка, комманды управления). Работаем с локальными и удаленными репозиториями. Изучаем GitHub, коммандная работа, Fork, pull request. </i>
 </blockquote></details>
 
@@ -40,5 +46,4 @@
 - https://app.diagrams.net/ - создание блок-схем
 - https://www.notion.so/ - облако знаний
 - https://obsidian.md/ - облако знаний
-- https://drive.google.com/file/d/1oM6gS9rVMlnDim8KnLshgSjBByb1OKlG/view?usp=sharing - "Git для профессионального программиста", книга-руководство (Чакон С., Штрауб Б.) [2016 год]
 - https://learn.microsoft.com/ru-ru/contribute/content/markdown-reference - Справочные материалы по Markdown

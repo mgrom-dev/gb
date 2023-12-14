@@ -7,5 +7,3 @@
 |git add .|добавить изменения файла к отслеживанию|
 |git commit -m "message"|зафиксировать изменения|
 |git checkout commitId|переключится на другой комит по ид, достаточно первые четыре символа|
-
-> [Интерактивный учебник по Git](https://learngitbranching.js.org/?locale=ru_RU)
