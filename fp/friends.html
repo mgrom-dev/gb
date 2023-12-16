@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .friend, .dog {
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      background-color: red;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dog {
+        background-color: green;
+    }
+
+    .friend2 {
+      background-color: blue;
+      left: 1000px; /* начальная позиция friend2 на расстоянии 1000м */
+    }
+  </style>
+</head>
+<body>
+  <div class="friend" id="friend1"></div>
+  <div class="friend friend2" id="friend2"></div>
+  <div class="dog" id="dog"></div>
+
+  <script>
+    const friend1 = document.getElementById('friend1');
+    const friend2 = document.getElementById('friend2');
+    const dog = document.getElementById('dog');
+
+    let distance = parseFloat(getComputedStyle(friend2).left);
+    let speedFriend1 = 1;
+    let speedFriend2 = 2;
+    let speedDog = 5;
+    let dogDirection = 1; // 1: towards friend2, -1: towards friend1
+    let count = 0;
+
+    function update() {
+      distance -= (speedFriend1 + speedFriend2); // friends are moving towards each other
+
+      document.title = count;
+      if (distance <= 0) {
+        clearInterval(interval);
+        return; 
+      }
+
+      moveFriend(friend1, speedFriend1);
+      moveFriend(friend2, -speedFriend2); // friend2 moves to the left (negative speed) to go towards friend1
+      moveDog(dog, speedDog);
+    }
+
+    function moveFriend(element, speed) {
+      const position = parseFloat(getComputedStyle(element).left);
+      element.style.left = position + speed + 'px';
+    }
+
+    function moveDog(element, speed) {
+      const position = parseFloat(getComputedStyle(element).left);
+
+      if ((dogDirection == 1 && position >= parseFloat(getComputedStyle(friend2).left)) || (dogDirection == -1 && position <= parseFloat(getComputedStyle(friend1).left))) {
+        dogDirection *= -1; // change direction when reaching one of the friends
+        count++;
+      }
+
+      element.style.left = position + speed * dogDirection + 'px';
+    }
+
+    const interval = setInterval(update, 100); // update every 100 milliseconds
+  </script>
+</body>
+</html>
