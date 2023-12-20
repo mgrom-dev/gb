@@ -43,7 +43,13 @@
 
 ----------
 ### Используемые материалы ###
-- https://app.diagrams.net/ - создание блок-схем
-- https://www.notion.so/ - облако знаний
-- https://obsidian.md/ - облако знаний
-- https://learn.microsoft.com/ru-ru/contribute/content/markdown-reference - Справочные материалы по Markdown
+- [Diagrams](https://app.diagrams.net/) - создание блок-схем
+- [Notion](https://www.notion.so/) - облако знаний
+- [Obsidian](https://obsidian.md/) - облако знаний
+- [Markdown](https://learn.microsoft.com/ru-ru/contribute/content/markdown-reference) - справочные материалы по Markdown
+- <u>Онлайн тренажеры метода слепой печати:</u>
+    - [TypeRun](https://typerun.top/#rus_basic)
+    - [TypingStudy](https://www.typingstudy.com/ru)
+    - [Stamina](https://stamina-online.com/ru)
+    - [Klavogonki](https://klavogonki.ru/) - игра
+    - [Typing](https://typing.io/) - для программистов
