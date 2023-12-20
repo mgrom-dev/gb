@@ -6,3 +6,6 @@ int d   = rnd.Next(1, 50);
 float sum = (float)(a * b) / (c + d);
 Console.Write(a + " * " + b + " / (" + c + " + " + d + ") = ");
 Console.WriteLine(sum);
+Console.Write("Press any key to continue...");
+Console.ReadKey(true);
+Console.Clear();
