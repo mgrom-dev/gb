@@ -2,7 +2,7 @@
 ----------
 ## Курсы:
 
-<details><summary><b>Введение в программирование</b></summary><blockquote>
+<details><summary><b>T1 - Введение в программирование</b></summary><blockquote>
     <details><summary><u>Лекции</u></summary><blockquote>
         <li>T1L1 - Урок 1. Что такое программирование и языки программирования <b>{решения на python}</b></li>
         <li>T1L2 - Урок 2. Базовые алгоритмы и массив как структура данных <b>{решение на javascript + html + Блок-схема}</b></li>
@@ -20,7 +20,7 @@
         <li>javascript+html+css</li></ul></i>
 </blockquote></details>
 
-<details><summary><b>Введение в контроль версий</b></summary><blockquote>
+<details><summary><b>T2 - Введение в контроль версий</b></summary><blockquote>
     <details><summary><U>Лекции</u></summary><blockquote>
         <li>T2L1 - Урок 1. Знакомство с контролем версий <b>{команды Git}</b></li>
         <li>T2L2 - Урок 2. Установка и настройка системы контроля версий <b>{Синтаксис Markdown + новые команды Git}</b></li>
