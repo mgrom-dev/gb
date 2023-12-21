@@ -21,7 +21,7 @@ Console.ReadKey(true);
 Console.Clear();
 
 // Чтение целого значения
-int ReadInt()
+static int ReadInt()
 {
     Console.Write("Введите целое число: ");
     int number = Convert.ToInt32(Console.ReadLine());

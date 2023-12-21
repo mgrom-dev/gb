@@ -6,7 +6,7 @@ try
     Console.Write(number + " => " + i);
     while(i < number)
     {
-        i = i + 1;
+        i++;
         Console.Write(", " + i);
     }
     Console.WriteLine();
@@ -20,7 +20,7 @@ Console.ReadKey(true);
 Console.Clear();
 
 // Чтение целого значения
-int ReadInt()
+static int ReadInt()
 {
     Console.Write("Введите целое число: ");
     int number = Convert.ToInt32(Console.ReadLine());
