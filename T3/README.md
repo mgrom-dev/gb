@@ -1,1 +1,2 @@
-### Знакомство с языками программирования
+### Р—РЅР°РєРѕРјСЃС‚РІРѕ СЃ СЏР·С‹РєР°РјРё РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёСЏ
+Р”Р»СЏ СЂР°Р±РѕС‚С‹ СЃ C# РёСЃРїРѕР»СЊР·СѓРµРј: [VSCode](https://code.visualstudio.com/) + [ext:ms-dotnettools.csdevkit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) + [dotnet](https://dotnet.microsoft.com/en-us/)
