@@ -1,0 +1,2 @@
+[Методичка](https://gbcdn.mrgcdn.ru/uploads/asset/5630364/attachment/e0f33a9c3fe8b6243c2b79410b3cf622.pdf) - стр.27  
+[Презентация](https://gbcdn.mrgcdn.ru/uploads/asset/5630358/attachment/923d8442b1a4fa34f08009d17c2b7396.pdf)
