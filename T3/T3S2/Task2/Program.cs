@@ -7,5 +7,5 @@ while (!(number > 99 && number < 1000))
         Console.WriteLine("Не верный ввод!");
     }
 }
-number = number / 100 * 10 + number % 10;
-Console.WriteLine(number);
+double result = Math.Pow(number % 100 / 10, number % 10);
+Console.WriteLine(result);
