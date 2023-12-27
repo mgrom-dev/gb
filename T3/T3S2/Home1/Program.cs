@@ -1,4 +1,5 @@
-﻿int number = 0;
+﻿// Домашняя работа 1
+int number = 0;
 while(number == 0)
 {
     Console.Write("Введите число: ");

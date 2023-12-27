@@ -1,4 +1,5 @@
-﻿int number = 0;
+﻿// Домашняя работа 3
+int number = 0;
 while(number < 10 || number > 99)
 {
     Console.Write("Введите число от 10 до 99: ");
