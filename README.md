@@ -41,6 +41,21 @@
     <i>Знакомимся с контролем версии Git (установка, настройка, комманды управления). Работаем с локальными и удаленными репозиториями. Изучаем GitHub, коммандная работа, Fork, pull request. </i>
 </blockquote></details>
 
+<details><summary><b>T3 - Знакомство с языками программирования</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L1">[T3L1]</a> - Урок 1. Введение</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L2">[T3L2]</a> - Урок 2. Массивы</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L3">[T3L3]</a> - Урок 3. Функции</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S1">[T3S1]</a> - Урок 1. Введение</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S2">[T3S2]</a> - Урок 2. Простые Алгоритмы</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S3">[T3S3]</a> - Урок 3. Массивы</li>
+    </blockquote>
+    </details>
+    <i>Знакомимся с языком программирования С#. </i>
+</blockquote></details>
+
 ----------
 ### Используемые материалы ###
 - [Diagrams](https://app.diagrams.net/) - создание блок-схем
