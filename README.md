@@ -51,20 +51,31 @@
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S1">[T3S1]</a> - Урок 1. Введение</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S2">[T3S2]</a> - Урок 2. Простые Алгоритмы</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S3">[T3S3]</a> - Урок 3. Массивы</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S4">[T3S4]</a> - Урок 4. Функции</li>
     </blockquote>
     </details>
     <i>Знакомимся с языком программирования С#. </i>
 </blockquote></details>
 
 ----------
-### Используемые материалы ###
-- [Diagrams](https://app.diagrams.net/) - создание блок-схем
-- [Notion](https://www.notion.so/) - облако знаний
-- [Obsidian](https://obsidian.md/) - облако знаний
-- [Markdown](https://learn.microsoft.com/ru-ru/contribute/content/markdown-reference) - справочные материалы по Markdown
-- <u>Онлайн тренажеры метода слепой печати:</u>
-    - [TypeRun](https://typerun.top/#rus_basic)
-    - [TypingStudy](https://www.typingstudy.com/ru)
-    - [Stamina](https://stamina-online.com/ru)
-    - [Klavogonki](https://klavogonki.ru/) - игра
-    - [Typing](https://typing.io/) - для программистов
+### Используемые материалы: ###
+-   <details><summary><b>Литература</b></summary><blockquote>
+    <a href="https://drive.google.com/file/d/1oM6gS9rVMlnDim8KnLshgSjBByb1OKlG/view?usp=sharing">"Git для профессионального программиста", книга-руководство (Чакон С., Штрауб Б.) [2016 год]</a><br>
+    <a href="https://drive.google.com/file/d/1CjkZXx6XdUFt_zKHobq1jXFNbx7PJZeU/view?usp=sharing">"C# Полное руководство", (Шилдт Г.) [2011 год]</a><br>
+    <a href="https://drive.google.com/file/d/1IgAalswZY2TyR9MloXbz21WlV-omLXds/view?usp=sharing">"Программирование на C# для начинающих. Особенности языка", (Васильев А. Н.) [2019 год]</a><br>
+    <a href="https://drive.google.com/file/d/1NYRLOne2faqaiNk_2sWm2YeF3uI6uRVO/view?usp=sharing">"Разработка обслуживаемых программ на языке C#", (Джуст Виссер) [2017 год]</a><br>
+    </blockquote></details>
+
+-   <details><summary><b>Ссылки</b></summary><blockquote>
+    <a href="https://app.diagrams.net/">Diagrams</a> - создание блок-схем<br>
+    <a href="https://www.notion.so/">Notion</a> - заметки, блокнот<br>
+    <a href="https://obsidian.md/">Obsidian</a> - заметки, блокнот<br>
+    <a href="https://learn.microsoft.com/ru-ru/contribute/content/markdown-reference">Markdown</a> - справочные материалы по Markdown<br>
+    <a href="https://dotnetfiddle.net/#">dotnetfiddle</a> - онлайн компилятор c#<br>
+    <u><b>Онлайн тренажеры метода слепой печати:</b></u><br>
+    &emsp;<a href="https://app.diagrams.net/">TypeRun</a><br>
+    &emsp;<a href="https://app.diagrams.net/">TypingStudy</a><br>
+    &emsp;<a href="https://app.diagrams.net/">Stamina</a><br>
+    &emsp;<a href="https://app.diagrams.net/">Klavogonki</a> - в виде игры<br>
+    &emsp;<a href="https://app.diagrams.net/">Typing</a> - для программистов<br>
+    </blockquote></details>
