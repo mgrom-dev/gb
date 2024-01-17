@@ -46,12 +46,14 @@
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L1">[T3L1]</a> - Урок 1. Введение</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L2">[T3L2]</a> - Урок 2. Массивы</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L3">[T3L3]</a> - Урок 3. Функции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L4">[T3L4]</a> - Урок 4. Двумерные массивы</li>
     </blockquote></details>
     <details><summary><u>Семинары</u></summary><blockquote>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S1">[T3S1]</a> - Урок 1. Введение</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S2">[T3S2]</a> - Урок 2. Простые Алгоритмы</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S3">[T3S3]</a> - Урок 3. Массивы</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S4">[T3S4]</a> - Урок 4. Функции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S5">[T3S5]</a> - Урок 5. Двумерные массивы</li>
     </blockquote>
     </details>
     <i>Знакомимся с языком программирования С#. </i>
