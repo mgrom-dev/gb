@@ -74,6 +74,7 @@
     <a href="https://obsidian.md/">Obsidian</a> - заметки, блокнот<br>
     <a href="https://learn.microsoft.com/ru-ru/contribute/content/markdown-reference">Markdown</a> - справочные материалы по Markdown<br>
     <a href="https://dotnetfiddle.net/#">dotnetfiddle</a> - онлайн компилятор c#<br>
+    <a href="https://migeel.sk/blog/2024/01/02/building-a-self-contained-game-in-csharp-under-2-kilobytes/">статья C#</a> - Создание автономной игры на C# размером менее 2 килобайт.<br>
     <u><b>Онлайн тренажеры метода слепой печати:</b></u><br>
     &emsp;<a href="https://app.diagrams.net/">TypeRun</a><br>
     &emsp;<a href="https://app.diagrams.net/">TypingStudy</a><br>
