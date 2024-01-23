@@ -47,6 +47,7 @@
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L2">[T3L2]</a> - Урок 2. Массивы</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L3">[T3L3]</a> - Урок 3. Функции</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L4">[T3L4]</a> - Урок 4. Двумерные массивы</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L5">[T3L5]</a> - Урок 5. Рекурсия</li>
     </blockquote></details>
     <details><summary><u>Семинары</u></summary><blockquote>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S1">[T3S1]</a> - Урок 1. Введение</li>
@@ -54,6 +55,7 @@
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S3">[T3S3]</a> - Урок 3. Массивы</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S4">[T3S4]</a> - Урок 4. Функции</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S5">[T3S5]</a> - Урок 5. Двумерные массивы</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S6">[T3S6]</a> - Урок 6. Массивы и строки</li>
     </blockquote>
     </details>
     <i>Знакомимся с языком программирования С#. </i>
@@ -75,6 +77,7 @@
     <a href="https://learn.microsoft.com/ru-ru/contribute/content/markdown-reference">Markdown</a> - справочные материалы по Markdown<br>
     <a href="https://dotnetfiddle.net/#">dotnetfiddle</a> - онлайн компилятор c#<br>
     <a href="https://migeel.sk/blog/2024/01/02/building-a-self-contained-game-in-csharp-under-2-kilobytes/">статья C#</a> - Создание автономной игры на C# размером менее 2 килобайт.<br>
+    <a href="https://metanit.com/">сайт по программированию</a> - справочные материалы для программистов по: asm, c#, c, c++, java, web, python, sql, mongoDB, go, vb.net, swift, kotlin, dart, php, rust, f#<br>
     <u><b>Онлайн тренажеры метода слепой печати:</b></u><br>
     &emsp;<a href="https://app.diagrams.net/">TypeRun</a><br>
     &emsp;<a href="https://app.diagrams.net/">TypingStudy</a><br>
