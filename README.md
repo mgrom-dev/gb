@@ -85,3 +85,5 @@
     &emsp;<a href="https://app.diagrams.net/">Klavogonki</a> - в виде игры<br>
     &emsp;<a href="https://app.diagrams.net/">Typing</a> - для программистов<br>
     </blockquote></details>
+
+    https://21-school.ru/
