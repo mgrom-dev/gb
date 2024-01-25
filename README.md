@@ -56,6 +56,7 @@
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S4">[T3S4]</a> - Урок 4. Функции</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S5">[T3S5]</a> - Урок 5. Двумерные массивы</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S6">[T3S6]</a> - Урок 6. Массивы и строки</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S7">[T3S7]</a> - Урок 7. Рекурсия</li>
     </blockquote>
     </details>
     <i>Знакомимся с языком программирования С#. </i>
@@ -79,9 +80,9 @@
     <a href="https://migeel.sk/blog/2024/01/02/building-a-self-contained-game-in-csharp-under-2-kilobytes/">статья C#</a> - Создание автономной игры на C# размером менее 2 килобайт.<br>
     <a href="https://metanit.com/">сайт по программированию</a> - справочные материалы для программистов по: asm, c#, c, c++, java, web, python, sql, mongoDB, go, vb.net, swift, kotlin, dart, php, rust, f#<br>
     <u><b>Онлайн тренажеры метода слепой печати:</b></u><br>
-    &emsp;<a href="https://app.diagrams.net/">TypeRun</a><br>
-    &emsp;<a href="https://app.diagrams.net/">TypingStudy</a><br>
-    &emsp;<a href="https://app.diagrams.net/">Stamina</a><br>
-    &emsp;<a href="https://app.diagrams.net/">Klavogonki</a> - в виде игры<br>
-    &emsp;<a href="https://app.diagrams.net/">Typing</a> - для программистов<br>
+    &emsp;<a href="https://typerun.top/#rus_basic">TypeRun</a><br>
+    &emsp;<a href="https://www.typingstudy.com/">TypingStudy</a><br>
+    &emsp;<a href="https://stamina-online.com/">Stamina</a><br>
+    &emsp;<a href="https://klavogonki.ru/">Klavogonki</a> - в виде игры<br>
+    &emsp;<a href="https://typing.io/">Typing</a> - для программистов<br>
     </blockquote></details>
