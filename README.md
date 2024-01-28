@@ -62,6 +62,22 @@
     <i>Знакомимся с языком программирования С#. </i>
 </blockquote></details>
 
+<details><summary><b>T4 - Знакомство с базами данных</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4L1">[T4L1]</a> - Урок 1. Знакомство с базами данных</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4L2">[T4L2]</a> - Урок 2. Работа с данными из разных таблиц</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4L3">[T4L3]</a> - Урок 3. Создание структуры базы данных</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4L4">[T4L4]</a> - Урок 4. Дополнительная лекция</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4S1">[T4S1]</a> - Урок 1. Знакомство с базами данных</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4S2">[T4S2]</a> - Урок 2. Работа с данными из разных таблиц</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4S3">[T4S3]</a> - Урок 3. Создание структуры базы данных</li>
+    </blockquote>
+    </details>
+    <i>Знакомимся с базами данных/i>
+</blockquote></details>
+
 ----------
 ### Используемые материалы: ###
 -   <details><summary><b>Литература</b></summary><blockquote>
