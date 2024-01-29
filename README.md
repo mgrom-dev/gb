@@ -75,7 +75,7 @@
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4S3">[T4S3]</a> - Урок 3. Создание структуры базы данных</li>
     </blockquote>
     </details>
-    <i>Знакомимся с базами данных/i>
+    <i>Знакомимся с базами данных </i>
 </blockquote></details>
 
 ----------
