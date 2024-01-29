@@ -46,15 +46,36 @@
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L1">[T3L1]</a> - Урок 1. Введение</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L2">[T3L2]</a> - Урок 2. Массивы</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L3">[T3L3]</a> - Урок 3. Функции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L4">[T3L4]</a> - Урок 4. Двумерные массивы</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3L5">[T3L5]</a> - Урок 5. Рекурсия</li>
     </blockquote></details>
     <details><summary><u>Семинары</u></summary><blockquote>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S1">[T3S1]</a> - Урок 1. Введение</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S2">[T3S2]</a> - Урок 2. Простые Алгоритмы</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S3">[T3S3]</a> - Урок 3. Массивы</li>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S4">[T3S4]</a> - Урок 4. Функции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S5">[T3S5]</a> - Урок 5. Двумерные массивы</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S6">[T3S6]</a> - Урок 6. Массивы и строки</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T3/T3S7">[T3S7]</a> - Урок 7. Рекурсия</li>
     </blockquote>
     </details>
     <i>Знакомимся с языком программирования С#. </i>
+</blockquote></details>
+
+<details><summary><b>T4 - Знакомство с базами данных</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4L1">[T4L1]</a> - Урок 1. Знакомство с базами данных</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4L2">[T4L2]</a> - Урок 2. Работа с данными из разных таблиц</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4L3">[T4L3]</a> - Урок 3. Создание структуры базы данных</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4L4">[T4L4]</a> - Урок 4. Дополнительная лекция</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4S1">[T4S1]</a> - Урок 1. Знакомство с базами данных</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4S2">[T4S2]</a> - Урок 2. Работа с данными из разных таблиц</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T4/T4S3">[T4S3]</a> - Урок 3. Создание структуры базы данных</li>
+    </blockquote>
+    </details>
+    <i>Знакомимся с базами данных/i>
 </blockquote></details>
 
 ----------
@@ -75,10 +96,12 @@
     <a href="https://obsidian.md/">Obsidian</a> - заметки, блокнот<br>
     <a href="https://learn.microsoft.com/ru-ru/contribute/content/markdown-reference">Markdown</a> - справочные материалы по Markdown<br>
     <a href="https://dotnetfiddle.net/#">dotnetfiddle</a> - онлайн компилятор c#<br>
+    <a href="https://migeel.sk/blog/2024/01/02/building-a-self-contained-game-in-csharp-under-2-kilobytes/">статья C#</a> - Создание автономной игры на C# размером менее 2 килобайт.<br>
+    <a href="https://metanit.com/">сайт по программированию</a> - справочные материалы для программистов по: asm, c#, c, c++, java, web, python, sql, mongoDB, go, vb.net, swift, kotlin, dart, php, rust, f#<br>
     <u><b>Онлайн тренажеры метода слепой печати:</b></u><br>
-    &emsp;<a href="https://app.diagrams.net/">TypeRun</a><br>
-    &emsp;<a href="https://app.diagrams.net/">TypingStudy</a><br>
-    &emsp;<a href="https://app.diagrams.net/">Stamina</a><br>
-    &emsp;<a href="https://app.diagrams.net/">Klavogonki</a> - в виде игры<br>
-    &emsp;<a href="https://app.diagrams.net/">Typing</a> - для программистов<br>
+    &emsp;<a href="https://typerun.top/#rus_basic">TypeRun</a><br>
+    &emsp;<a href="https://www.typingstudy.com/">TypingStudy</a><br>
+    &emsp;<a href="https://stamina-online.com/">Stamina</a><br>
+    &emsp;<a href="https://klavogonki.ru/">Klavogonki</a> - в виде игры<br>
+    &emsp;<a href="https://typing.io/">Typing</a> - для программистов<br>
     </blockquote></details>
