@@ -64,6 +64,9 @@
     <a href="https://drive.google.com/file/d/1CjkZXx6XdUFt_zKHobq1jXFNbx7PJZeU/view?usp=sharing">"C# Полное руководство", (Шилдт Г.) [2011 год]</a><br>
     <a href="https://drive.google.com/file/d/1IgAalswZY2TyR9MloXbz21WlV-omLXds/view?usp=sharing">"Программирование на C# для начинающих. Особенности языка", (Васильев А. Н.) [2019 год]</a><br>
     <a href="https://drive.google.com/file/d/1NYRLOne2faqaiNk_2sWm2YeF3uI6uRVO/view?usp=sharing">"Разработка обслуживаемых программ на языке C#", (Джуст Виссер) [2017 год]</a><br>
+    <a href="https://drive.google.com/file/d/1-AnPYXogP2v449gbKE2Jomkb89_JMMhk/view?usp=sharing">"Введение в системы баз данных", (К. Дж. Дейт) [2005 год]</a><br>
+    <a href="https://drive.google.com/file/d/1_C51Vgy8kWtIhX2BKWluizd1skKOBU6w/view?usp=sharing">"MySQL по максимуму", (Бэрон Шварц, Вадим Ткаченко, Петр Зайцев) [2018 год]</a><br>
+    <a href="https://drive.google.com/file/d/1QFhl8_WhDtqNHCytOrD_9QKOdUWOj0Ap/view?usp=sharing">"Семь баз данных за семь недель", (Джим Р. Уилсон, Эрик Редмонд) [2013 год]</a><br>
     </blockquote></details>
 
 -   <details><summary><b>Ссылки</b></summary><blockquote>
