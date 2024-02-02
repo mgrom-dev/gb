@@ -88,6 +88,9 @@
     <a href="https://drive.google.com/file/d/1-AnPYXogP2v449gbKE2Jomkb89_JMMhk/view?usp=sharing">"Введение в системы баз данных", (К. Дж. Дейт) [2005 год]</a><br>
     <a href="https://drive.google.com/file/d/1_C51Vgy8kWtIhX2BKWluizd1skKOBU6w/view?usp=sharing">"MySQL по максимуму", (Бэрон Шварц, Вадим Ткаченко, Петр Зайцев) [2018 год]</a><br>
     <a href="https://drive.google.com/file/d/1QFhl8_WhDtqNHCytOrD_9QKOdUWOj0Ap/view?usp=sharing">"Семь баз данных за семь недель", (Джим Р. Уилсон, Эрик Редмонд) [2013 год]</a><br>
+    <a href="https://drive.google.com/file/d/10irrXXXGbJzKCyKGgF1QRDnlw-pbiFNo/view?usp=sharing">"Потоковая обработка данных", (Эндрю Дж. Пселтис) [2018 год]</a><br>
+    <a href="https://drive.google.com/file/d/10lF-au1JwD5eZOs8WZkZwerSp1Z_vMWS/view?usp=sharing">"PostgreSQL. Основы языка SQL", (Евгений Моргунов) [2018 год]</a><br>
+    <a href="https://drive.google.com/file/d/10gv19UFLJSt_lIsviVKJZPNsev86qSVe/view?usp=sharing">"Базы данных" (Томас Коннолли, Каролин Бегг) [2003 год]</a><br>
     </blockquote></details>
 
 -   <details><summary><b>Ссылки</b></summary><blockquote>
