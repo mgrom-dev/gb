@@ -76,6 +76,7 @@
     </blockquote>
     </details>
     <i>Знакомимся с базами данных, основы организации БД и псевдокод</i>
+    <li><a href="https://app.diagrams.net/">diagrams</a> - рисование диаграм, структур, схем</li>
 </blockquote></details>
 
 ----------
@@ -91,6 +92,10 @@
     <a href="https://drive.google.com/file/d/10irrXXXGbJzKCyKGgF1QRDnlw-pbiFNo/view?usp=sharing">"Потоковая обработка данных", (Эндрю Дж. Пселтис) [2018 год]</a><br>
     <a href="https://drive.google.com/file/d/10lF-au1JwD5eZOs8WZkZwerSp1Z_vMWS/view?usp=sharing">"PostgreSQL. Основы языка SQL", (Евгений Моргунов) [2018 год]</a><br>
     <a href="https://drive.google.com/file/d/10gv19UFLJSt_lIsviVKJZPNsev86qSVe/view?usp=sharing">"Базы данных" (Томас Коннолли, Каролин Бегг) [2003 год]</a><br>
+    <a href="https://drive.google.com/file/d/12Cs70RVAcHVwr7lGPgQl4ZbQ0r1yUNXa/view?usp=sharing">"MongoDB в действии" (Кайл Бэнкер) [2012 год]</a><br>
+    <a href="https://drive.google.com/file/d/12IP1_I0l_ZEQQk7C6AD1Hm_AOIiV8vCw/view?usp=sharing">"MySQL. Сборник рецептов" (Поль Дюбуа) [2007 год]</a><br>
+    <a href="https://drive.google.com/file/d/12W-JPaIQmbs5E8LzBaHHsaKAURB1cBXJ/view?usp=sharing">"Системы баз данных" (Гектор Гарсиа-Молина, Джеффри Ульман, Дженнифер Уидом) [2003 год]</a><br>
+    <a href="https://drive.google.com/file/d/12Il9N7AYOFEOcLSNCcwk6CRzcEXG3bfZ/view?usp=sharing">"Секреты Oracle SQL" (Санжей Мишра, Алан Бьюли) [2003 год]</a><br>
     </blockquote></details>
 
 -   <details><summary><b>Ссылки</b></summary><blockquote>
