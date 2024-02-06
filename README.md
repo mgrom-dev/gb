@@ -79,6 +79,27 @@
     <li><a href="https://app.diagrams.net/">diagrams</a> - рисование диаграм, структур, схем</li>
 </blockquote></details>
 
+<details><summary><b>T5 - Java: знакомство и как пользоваться базовым API</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L1">[T5L1]</a> - Урок 1. Знакомство с языком программирования Java</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L2">[T5L2]</a> - Урок 2. Почему вы не можете не использовать API</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L3">[T5L3]</a> - Урок 3. Коллекции JAVA: Введение</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L4">[T5L4]</a> - Урок 4. Хранение и обработка данных ч1: приоритетные коллекции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L5">[T5L5]</a> - Урок 5. Хранение и обработка данных ч2: множество коллекций Map</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L6">[T5L6]</a> - Урок 6. Хранение и обработка данных ч3: множество коллекций Set</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L1">[T5S1]</a> - Урок 1. Знакомство с языком программирования Java</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L2">[T5S2]</a> - Урок 2. Почему вы не можете не использовать API</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L3">[T5S3]</a> - Урок 3. Коллекции JAVA: Введение</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L4">[T5S4]</a> - Урок 4. Хранение и обработка данных ч1: приоритетные коллекции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L5">[T5S5]</a> - Урок 5. Хранение и обработка данных ч2: множество коллекций Map</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L6">[T5S6]</a> - Урок 6. Хранение и обработка данных ч3: множество коллекций Set</li>
+    </blockquote>
+    </details>
+    <i>Знакомимся c JAVA</i>
+</blockquote></details>
+
 ----------
 ### Используемые материалы: ###
 -   <details><summary><b>Литература</b></summary><blockquote>
