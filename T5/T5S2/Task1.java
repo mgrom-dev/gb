@@ -12,9 +12,9 @@ public class Task1 {
     }
 
     public static String repeat2Char(int N, char c1, char c2) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(N);
         while(sb.length() < N)
-            sb.append(String.valueOf(c1) + String.valueOf(c2));
+            sb.append(c1).append(c2);
         return sb.toString();
     }
 }
