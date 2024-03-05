@@ -89,15 +89,38 @@
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L6">[T5L6]</a> - Урок 6. Хранение и обработка данных ч3: множество коллекций Set</li>
     </blockquote></details>
     <details><summary><u>Семинары</u></summary><blockquote>
-        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L1">[T5S1]</a> - Урок 1. Знакомство с языком программирования Java</li>
-        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L2">[T5S2]</a> - Урок 2. Почему вы не можете не использовать API</li>
-        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L3">[T5S3]</a> - Урок 3. Коллекции JAVA: Введение</li>
-        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L4">[T5S4]</a> - Урок 4. Хранение и обработка данных ч1: приоритетные коллекции</li>
-        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L5">[T5S5]</a> - Урок 5. Хранение и обработка данных ч2: множество коллекций Map</li>
-        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5L6">[T5S6]</a> - Урок 6. Хранение и обработка данных ч3: множество коллекций Set</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5S1">[T5S1]</a> - Урок 1. Знакомство с языком программирования Java</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5S2">[T5S2]</a> - Урок 2. Почему вы не можете не использовать API</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5S3">[T5S3]</a> - Урок 3. Коллекции JAVA: Введение</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5S4">[T5S4]</a> - Урок 4. Хранение и обработка данных ч1: приоритетные коллекции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5S5">[T5S5]</a> - Урок 5. Хранение и обработка данных ч2: множество коллекций Map</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T5/T5S6">[T5S6]</a> - Урок 6. Хранение и обработка данных ч3: множество коллекций Set</li>
     </blockquote>
     </details>
     <i>Знакомимся c JAVA</i>
+</blockquote></details>
+
+<details><summary><b>T6 - Java: Объектно-ориентированное программирование</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6L1">[T6L1]</a> - Урок 1. Знакомство с языком программирования Java</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6L2">[T6L2]</a> - Урок 2. Принципы ООП Абстракция и интерфейсы. Пример проектирования</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6L3">[T6L3]</a> - Урок 3. Некоторые стандартные интерфейсы Java и примеры их использования</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6L4">[T6L4]</a> - Урок 4. ООП: Обобщения</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6L5">[T6L5]</a> - Урок 5. ООП: От простого к практике</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6L6">[T6L6]</a> - Урок 6. SOLID</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6L7">[T6L7]</a> - Урок 7. Есть ли жизнь без Java?</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6S1">[T6S1]</a> - Урок 1. Принципы ООП: Инкапсуляция, наследование, полиморфизм</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6S2">[T6S2]</a> - Урок 2. Принципы ООП Абстракция и интерфейсы. Пример проектирования</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6S3">[T6S3]</a> - Урок 3. Некоторые стандартные интерфейсы Java и примеры их использования</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6S4">[T6S4]</a> - Урок 4. ООП: Обобщения. ч1</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6S5">[T6S5]</a> - Урок 5. От простого к практике</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6S6">[T6S6]</a> - Урок 6. ООП Дизайн и  Solid </li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6S7">[T6S7]</a> - Урок 7. ООП Дизайн и  Solid ч.2</li>
+    </blockquote>
+    </details>
+    <i>Принципы ООП c JAVA</i>
 </blockquote></details>
 
 ----------
