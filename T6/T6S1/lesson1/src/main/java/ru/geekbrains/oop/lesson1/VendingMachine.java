@@ -23,6 +23,37 @@ public class VendingMachine {
         return null;
     }
 
+    public Chips getChips(String brand, double weight){
+        for (Product product : products){
+            if (product instanceof Chips){
+                Chips chips = (Chips)product;
+                if (chips.getBrand() == brand && chips.getWeight() == weight){
+                    return chips;
+                }
+            }
+        }
+        return null;
+    }
 
+    public Product buyProduct(String brand, double price){
+        for (Product product : products){
+            if (product.getBrand() == brand && product.getPrice() <= price){
+                return product;
+            }
+        }
+        return null;
+    }
+
+    public Chocolate getChocolate(String brand, double callories){
+        for (Product product : products){
+            if (product instanceof Chocolate){
+                Chocolate chocolate = (Chocolate)product;
+                if (chocolate.getBrand() == brand && chocolate.getCallories() == callories){
+                    return chocolate;
+                }
+            }
+        }
+        return null;
+    }
 
 }
