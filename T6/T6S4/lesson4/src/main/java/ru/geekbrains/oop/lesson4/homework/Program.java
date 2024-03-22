@@ -60,7 +60,7 @@ public class Program {
         System.out.println("Вес 2 коробки с апельсинами: " + orangeBox2.getWeight());
         
         // Выводим результат сравнения веса коробок
-        System.out.println("appleBox1.weight == orangeBox1.weight" + appleBox1.compare(orangeBox1));
+        System.out.println("appleBox1.weight == orangeBox1.weight is: " + appleBox1.compare(orangeBox1));
 
         // пересыпаем коробки
         appleBox1.putsFruitsToAnotherBox(appleBox2);

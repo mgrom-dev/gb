@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class Box<T extends Fruit> implements Comparable<Box<T>> {
     // c. Для хранения фруктов внутри коробки можно использовать ArrayList;
-    private ArrayList<T> fruits;
+    private ArrayList<T> fruits = new ArrayList<>();
 
     // g. Не забываем про метод добавления фрукта в коробку.
     public void addFruit(T fruit) {
