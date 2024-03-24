@@ -120,6 +120,7 @@
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T6/T6S7">[T6S7]</a> - Урок 7. ООП Дизайн и  Solid ч.2</li>
     </blockquote>
     </details>
+    <i><a href="https://habr.com/ru/companies/piter/articles/418157/">Элегантные объекты. Java Edition</a></i><br>
     <i>Принципы ООП c JAVA</i>
 </blockquote></details>
 
