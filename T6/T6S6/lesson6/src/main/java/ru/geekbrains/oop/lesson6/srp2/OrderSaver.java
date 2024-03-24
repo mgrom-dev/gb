@@ -3,7 +3,7 @@ package ru.geekbrains.oop.lesson6.srp2;
 import java.io.FileWriter;
 import java.io.IOException;
 
-// Класс отвечающий за сохранение заказа в формате JSON.
+// РљР»Р°СЃСЃ РѕС‚РІРµС‡Р°СЋС‰РёР№ Р·Р° СЃРѕС…СЂР°РЅРµРЅРёРµ Р·Р°РєР°Р·Р° РІ С„РѕСЂРјР°С‚Рµ JSON.
 public class OrderSaver {
     public static void saveOrderToJson(Order order) {
         String fileName = "order.json";
