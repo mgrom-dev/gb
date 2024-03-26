@@ -26,5 +26,9 @@ public class Company {
     public String getName() {
         return name;
     }
+
+    public List<Vacancy> getVacancys() {
+        return vacancys;
+    }
     
 }

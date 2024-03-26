@@ -26,6 +26,7 @@ public abstract class Applicant implements Observer {
                     name, vacancy.getCompanyName(), vacancy.getJobType().getName(), vacancy.getSalary());
             this.salary = vacancy.getSalary();
             this.subscriptions.add(vacancy);
+            vacancy.subscribes.add(this);
             if (this.subscriptions.size() > 1)
                 unsubscribe = true;
         } else {
@@ -48,8 +49,12 @@ public abstract class Applicant implements Observer {
         sb.append("Имя: ").append(name).append("; ");
         sb.append("Зарплата: ").append(salary).append("; ");
         sb.append("Подписки на вакансии: [");
-        for (Vacancy vacancy : subscriptions) {
-            sb.append("\"").append(vacancy.getJobType().getName()).append(" в компании ").append(vacancy.getCompanyName()).append("\", ");
+        for (int i = 0; i < subscriptions.size(); i++) {
+            Vacancy vacancy = subscriptions.get(i);
+            sb.append("\"").append(vacancy.getJobType().getName()).append(" в компании ").append(vacancy.getCompanyName()).append("\"");
+            if (i < subscriptions.size() - 1) {
+                sb.append(", ");
+            }
         }
         sb.append("] unsubscribe: ").append(unsubscribe ? "Да" : "Нет");
         return sb.toString();

@@ -26,8 +26,12 @@ public class Program {
         List<Applicant> applicants = createRandomApplicant(5); // генерируем соискателей
         applicants.forEach(a -> publisher.registerObserver(a)); // добавляем в рассылку
         companies.forEach(c -> c.needEmployee()); // рассылка вакансии
+
         System.out.println("");
         applicants.forEach(a -> System.out.println(a));
+
+        System.out.println("");
+        companies.forEach(c -> c.getVacancys().forEach(v -> System.out.println(v)));
     }
 
     // генерация компании
@@ -63,10 +67,11 @@ public class Program {
         List<Applicant> applicants = new ArrayList<>();
         String[] names = { "John", "Alice", "Bob", "Mary", "David", "Emma", "James", "Olivia", "Michael", "Sophia",
                 "Max", "Denis", "Anna", "Mark" };
+        String[] lastNames = {"Smith", "Johnson", "Brown", "Taylor", "Williams", "Jones", "Garcia", "Davis", "Miller", "Wilson"};
 
         for (int i = 0; i < count; i++) {
             int randomJobType = random.nextInt(3);
-            String name = names[random.nextInt(names.length)];
+            String name = names[random.nextInt(names.length)] + " " + lastNames[random.nextInt(lastNames.length)];
             switch (randomJobType) {
                 case 0:
                     applicants.add(new Master(name));
