@@ -1,2 +1,5 @@
 /bin
 /.vscode
+*/target/
+*/.idea/
+*.class
