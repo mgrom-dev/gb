@@ -121,6 +121,7 @@
     </blockquote>
     </details>
     <i><a href="https://habr.com/ru/companies/piter/articles/418157/">Элегантные объекты. Java Edition</a></i><br>
+    <i><a href="https://drive.google.com/file/d/1mQzuKSg5fvzxFiRR5-Eg1zKa-tWZauaw/view?usp=sharing">"Философия JAVA" (Брюс Эккель) [2015 год]</a></i><br>
     <i>Принципы ООП c JAVA</i>
 </blockquote></details>
 
@@ -141,6 +142,7 @@
     <a href="https://drive.google.com/file/d/12IP1_I0l_ZEQQk7C6AD1Hm_AOIiV8vCw/view?usp=sharing">"MySQL. Сборник рецептов" (Поль Дюбуа) [2007 год]</a><br>
     <a href="https://drive.google.com/file/d/12W-JPaIQmbs5E8LzBaHHsaKAURB1cBXJ/view?usp=sharing">"Системы баз данных" (Гектор Гарсиа-Молина, Джеффри Ульман, Дженнифер Уидом) [2003 год]</a><br>
     <a href="https://drive.google.com/file/d/12Il9N7AYOFEOcLSNCcwk6CRzcEXG3bfZ/view?usp=sharing">"Секреты Oracle SQL" (Санжей Мишра, Алан Бьюли) [2003 год]</a><br>
+    <a href="https://drive.google.com/file/d/1mQzuKSg5fvzxFiRR5-Eg1zKa-tWZauaw/view?usp=sharing">"Философия JAVA" (Брюс Эккель) [2015 год]</a><br>
     </blockquote></details>
 
 -   <details><summary><b>Ссылки</b></summary><blockquote>
