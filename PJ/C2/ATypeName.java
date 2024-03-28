@@ -3,6 +3,9 @@
  * пригодную для компиляции и запуска.
  */
 public class ATypeName {
-    /* Тело класса */
+    private String text = "Hello user!";
 
+    public static void main(String[] args) {
+        System.out.println(new ATypeName().text);
+    }
 }
