@@ -4,7 +4,7 @@
 
 #define SIZE 100000         // количество элементов массива
 #define COUNT_TEST 5        // количество замеров функции сортировки
-#define FUNC hairbrush_sort // проверяемая функция сортировки
+#define FUNC hairbrush_sort     // проверяемая функция сортировки
 
 // алгоритмы сортировки
 void quick_sort(int *array, int size);                  // быстрая сортировка https://thecode.media/qsort/
@@ -44,11 +44,66 @@ int main()
 }
 
 /**
- * Быстрая сортировка
- */
-// void quick_sort(int* array, int size) {
+ * Основная функция быстрой сортировки массива
+*/
+void quickSort(int* arr, int size, int* result, int* resultIndex) {
+    // Если длина массива меньше двух (в нём один элемент или нет элементов вообще)
+    // то возвращаем массив как есть, без обработки
+    if (size < 2) {
+        for (int i = 0; i < size; ++i) {
+            result[*resultIndex] = arr[i];
+            (*resultIndex)++;
+        }
+        return;
+    }
 
-// }
+    // Берём первый элемент массива как опорный
+    int pivot = arr[0];
+    // Будущие левые и правые части массива
+    int* left = malloc(sizeof(int) * size);
+    int* right = malloc(sizeof(int) * size);
+    int leftSize = 0, rightSize = 0;
+
+    // Перебираем весь массив по порядку
+    for (int i = 1; i < size; ++i) {
+        // Если опорный элемент больше текущего
+        if (pivot > arr[i]) {
+            // То добавляем текущий элемент в левую часть
+            left[leftSize++] = arr[i];
+        } else {
+            // В противном случае добавляем текущий элемент в правую часть
+            right[rightSize++] = arr[i];
+        }
+    }
+
+    // Отправляем на рекурсивную обработку левую и правую части массива
+    quickSort(left, leftSize, result, resultIndex);
+    
+    // Добавляем опорный элемент в результирующий массив
+    result[*resultIndex] = pivot;
+    (*resultIndex)++;
+    
+    quickSort(right, rightSize, result, resultIndex);
+
+    // Освобождаем память
+    free(left);
+    free(right);
+}
+
+/**
+ * Быстрая сортировка, подготовка
+ */
+void quick_sort(int* array, int size) {
+    int* sortedArray = malloc(sizeof(int) * size);
+    int resultIndex = 0;
+    
+    quickSort(array, size, sortedArray, &resultIndex);
+    for (int i = 0; i < size; i++) {
+        array[i] = sortedArray[i];
+    }
+    
+    free(sortedArray);
+}
 
 /**
  * Сортировка пузырьком
