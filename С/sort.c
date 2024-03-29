@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 100000000      // количество элементов массива 100000000 (566 ms 780MB)
+#define SIZE 1000000      // количество элементов массива 100000000 (566 ms 780MB)
 #define COUNT_TEST 5        // количество замеров функции сортировки
-#define FUNC frequency_sort // проверяемая функция сортировки
+#define FUNC hairbrush_sort // проверяемая функция сортировки
 
 // алгоритмы сортировки
 void frequency_sort(int *array, int size);              // сортировка по повторениям элементов в один проход
