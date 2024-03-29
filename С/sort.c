@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 100000         // количество элементов массива
+#define SIZE 1000000        // количество элементов массива
 #define COUNT_TEST 5        // количество замеров функции сортировки
 #define FUNC frequency_sort // проверяемая функция сортировки
 
@@ -50,12 +50,8 @@ int main()
  */
 void frequency_sort(int *array, int size)
 {
-    int frequency_array[size]; // массив с частотой повторов значений
-    int freq_size = 0;         // размер массива с частотой повторов
-
-    // обнуляем массив повторов
-    for (int i = 0; i < size; i++)
-        frequency_array[i] = 0;
+    int *frequency_array = calloc(size, sizeof(*frequency_array)); // массив с частотой повторов значений
+    int freq_size = 0;                                             // размер массива с частотой повторов
 
     // создаем массив повторов
     for (int i = 0; i < size; i++)
@@ -75,6 +71,8 @@ void frequency_sort(int *array, int size)
             array[index++] = i;
         }
     }
+
+    free(frequency_array);
 }
 
 /**
@@ -248,16 +246,18 @@ void copy_array(int *source, int size1, int *target)
  */
 long test_sort_array(void (*func)(int *, int))
 {
-    int main_array[SIZE];                     // главный массив, в котором значения точно правильно отсортированы
-    int test_array[SIZE];                     // тестируемый массив, на котором проверяется быстродействие и правильность сортировки
-    randomize_array(main_array, SIZE, 1000);  // заполняем главный массив случайными значениями
-    copy_array(main_array, SIZE, test_array); // копируем главный массив в тестируемый
-    hairbrush_sort(main_array, SIZE);         // сортируем главный массив правильным алгоритмом
+    int *main_array = malloc(sizeof(*main_array) * SIZE); // главный массив, в котором значения точно правильно отсортированы
+    int *test_array = malloc(sizeof(*test_array) * SIZE); // тестируемый массив, на котором проверяется быстродействие и правильность сортировки
+    randomize_array(main_array, SIZE, 1000);              // заполняем главный массив случайными значениями
+    copy_array(main_array, SIZE, test_array);             // копируем главный массив в тестируемый
+    frequency_sort(main_array, SIZE);                     // сортируем главный массив правильным алгоритмом
 
     clock_t time_start = clock(); // делаем замер времени
     func(test_array, SIZE);
     clock_t time_end = clock();
 
     int correct = compare_array(main_array, SIZE, test_array, SIZE); // проверяем правильность сортировки
+    free(main_array);
+    free(test_array);
     return correct == 0 ? time_end - time_start : -1;
 }
