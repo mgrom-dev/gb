@@ -42,9 +42,21 @@ Args:
 AllTheColorsOfTheRainbow:
 	java $@
 
+# Exercise 12
+HelloDate:
+	javac -encoding utf8 $@.java
+	java $@
+	javadoc -encoding utf8 -d ./$@ $@.java
+
+# Exercise 13
+Documentation:
+#	javadoc -encoding utf8 -d ./$@ $@1.java
+#	javadoc -encoding utf8 -d ./$@ $@2.java
+	javadoc -encoding utf8 -d ./$@ $@3.java
+
 # пример создания документации к файлу
 javadoc:
 	javadoc -encoding UTF-8 -d ./javadoc Prg1.java
 
 clean:
-	rm -rf *.class *.js *.css *.html ./javadoc/ ./legal/ ./resources/ ./script-dir/ ./element-list
+	rm -rf *.class *.js *.css *.html ./Documentation/ ./javadoc/ ./HelloDate/ ./legal/ ./resources/ ./script-dir/ ./element-list
