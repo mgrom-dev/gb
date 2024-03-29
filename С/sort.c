@@ -4,9 +4,10 @@
 
 #define SIZE 100000         // количество элементов массива
 #define COUNT_TEST 5        // количество замеров функции сортировки
-#define FUNC hairbrush_sort     // проверяемая функция сортировки
+#define FUNC frequency_sort // проверяемая функция сортировки
 
 // алгоритмы сортировки
+void frequency_sort(int *array, int size);              // сортировка по повторениям элементов в один проход
 void quick_sort(int *array, int size);                  // быстрая сортировка https://thecode.media/qsort/
 void bubble_sort(int *array, int size);                 // сортировка пузырьком
 void hairbrush_sort(int *array, int size);              // сортировка расческой
@@ -44,13 +45,49 @@ int main()
 }
 
 /**
+ * Сортировка повторениями
+ * Условие при котором она работает: 0 <= array[i] < size
+ */
+void frequency_sort(int *array, int size)
+{
+    int frequency_array[size]; // массив с частотой повторов значений
+    int freq_size = 0;         // размер массива с частотой повторов
+
+    // обнуляем массив повторов
+    for (int i = 0; i < size; i++)
+        frequency_array[i] = 0;
+
+    // создаем массив повторов
+    for (int i = 0; i < size; i++)
+    {
+        int index = array[i];
+        frequency_array[index]++;
+        if (index > freq_size)
+            freq_size = index;
+    }
+    freq_size++;
+
+    // на основе созданного массива повторов, заполняем итоговый массив
+    for (int i = 0, index = 0; i < freq_size; i++)
+    {
+        for (int r = 0; r < frequency_array[i]; r++)
+        {
+            array[index++] = i;
+        }
+    }
+}
+
+/**
  * Основная функция быстрой сортировки массива
-*/
-void quickSort(int* arr, int size, int* result, int* resultIndex) {
+ */
+void quickSort(int *arr, int size, int *result, int *resultIndex)
+{
     // Если длина массива меньше двух (в нём один элемент или нет элементов вообще)
     // то возвращаем массив как есть, без обработки
-    if (size < 2) {
-        for (int i = 0; i < size; ++i) {
+    if (size < 2)
+    {
+        for (int i = 0; i < size; ++i)
+        {
             result[*resultIndex] = arr[i];
             (*resultIndex)++;
         }
@@ -60,17 +97,21 @@ void quickSort(int* arr, int size, int* result, int* resultIndex) {
     // Берём первый элемент массива как опорный
     int pivot = arr[0];
     // Будущие левые и правые части массива
-    int* left = malloc(sizeof(int) * size);
-    int* right = malloc(sizeof(int) * size);
+    int *left = malloc(sizeof(int) * size);
+    int *right = malloc(sizeof(int) * size);
     int leftSize = 0, rightSize = 0;
 
     // Перебираем весь массив по порядку
-    for (int i = 1; i < size; ++i) {
+    for (int i = 1; i < size; ++i)
+    {
         // Если опорный элемент больше текущего
-        if (pivot > arr[i]) {
+        if (pivot > arr[i])
+        {
             // То добавляем текущий элемент в левую часть
             left[leftSize++] = arr[i];
-        } else {
+        }
+        else
+        {
             // В противном случае добавляем текущий элемент в правую часть
             right[rightSize++] = arr[i];
         }
@@ -78,11 +119,11 @@ void quickSort(int* arr, int size, int* result, int* resultIndex) {
 
     // Отправляем на рекурсивную обработку левую и правую части массива
     quickSort(left, leftSize, result, resultIndex);
-    
+
     // Добавляем опорный элемент в результирующий массив
     result[*resultIndex] = pivot;
     (*resultIndex)++;
-    
+
     quickSort(right, rightSize, result, resultIndex);
 
     // Освобождаем память
@@ -93,15 +134,17 @@ void quickSort(int* arr, int size, int* result, int* resultIndex) {
 /**
  * Быстрая сортировка, подготовка
  */
-void quick_sort(int* array, int size) {
-    int* sortedArray = malloc(sizeof(int) * size);
+void quick_sort(int *array, int size)
+{
+    int *sortedArray = malloc(sizeof(int) * size);
     int resultIndex = 0;
-    
+
     quickSort(array, size, sortedArray, &resultIndex);
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++)
+    {
         array[i] = sortedArray[i];
     }
-    
+
     free(sortedArray);
 }
 
