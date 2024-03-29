@@ -8,6 +8,7 @@
 
 // алгоритмы сортировки
 void frequency_sort(int *array, int size);              // сортировка по повторениям элементов в один проход
+void quick_sort_standart(int *array, int size);         // быстрая сортировка встроенным методом
 void quick_sort(int *array, int size);                  // быстрая сортировка https://thecode.media/qsort/
 void bubble_sort(int *array, int size);                 // сортировка пузырьком
 void hairbrush_sort(int *array, int size);              // сортировка расческой
@@ -42,6 +43,22 @@ int main()
         printf("Error! Function sort not correct\n");
     else
         printf("Tests: %d average time: %ld ms\n", COUNT_TEST, time_sum / COUNT_TEST);
+}
+
+/**
+ * Компаратор для работы функции сортировки
+ */
+int compare(const void *x1, const void *x2)
+{
+    return (*(int *)x1 - *(int *)x2);
+}
+
+/**
+ * Быстрая сортировка встроенным методом Си
+ */
+void quick_sort_standart(int *array, int size)
+{
+    qsort(array, size, sizeof(int), compare);
 }
 
 /**
