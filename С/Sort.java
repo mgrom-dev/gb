@@ -6,14 +6,24 @@ import java.util.Random;
  */
 class Sort {
     public static void main(String[] args) {
-        int array[] = new int[1000000];
-        randomizeArray(array, 1000);
-        long startTime = System.currentTimeMillis();
-        sortArrayFrequency(array);
-        long endTime = System.currentTimeMillis();
-        System.out.println("time sort: " + (endTime - startTime));
-        System.out.println(array[0] + " : " + array[1000000 - 1]);
+        int array[] = new int[100000000];
+        long totalTime = 0;
+
+        for (int i = 0; i < 5; i++) {
+            randomizeArray(array, 1000);
+            long startTime = System.currentTimeMillis();
+            sortArrayFrequency(array);
+            long endTime = System.currentTimeMillis();
+            long executionTime = endTime - startTime;
+            totalTime += executionTime;
+            System.out.println("¬рем€ сортировки " + (i + 1) + ": " + executionTime + " мс");
+        }
+
+        long averageTime = totalTime / 5;
+        System.out.println("—реднее врем€ выполнени€ метода: " + averageTime + " мс");
     }
+
+
 
     // заполнение массива случайными числами
     static void randomizeArray(int array[], int bound) {

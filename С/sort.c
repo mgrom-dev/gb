@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 1000000        // количество элементов массива
+#define SIZE 100000000        // количество элементов массива
 #define COUNT_TEST 5        // количество замеров функции сортировки
 #define FUNC frequency_sort // проверяемая функция сортировки
 
