@@ -1,8 +1,9 @@
 import random
 import time
 
+# 40850 ms over 2000MB
 def main():
-    array = [0] * 10000000
+    array = [0] * 100000000
     randomize_array(array, 1000)
     start_time = time.time()
     sort_array_frequency(array)

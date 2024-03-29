@@ -159,4 +159,5 @@
     &emsp;<a href="https://stamina-online.com/">Stamina</a><br>
     &emsp;<a href="https://klavogonki.ru/">Klavogonki</a> - в виде игры<br>
     &emsp;<a href="https://typing.io/">Typing</a> - для программистов<br>
+    &emsp;<a href="https://edu.neoflex.ru/devops/">edu.neoflex</a> - Бесплатный курс DevOps<br>
     </blockquote></details>

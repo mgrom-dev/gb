@@ -1,29 +1,54 @@
 import java.util.Arrays;
 import java.util.Random;
+import java.util.function.Consumer;
 
 /**
  * Программа для сравнения эффективности алгоритмов сортировки
  */
 class Sort {
     public static void main(String[] args) {
-        int array[] = new int[100000000];
-        long totalTime = 0;
+        // Задаем параметры для функции
+        int sizeArray = 100000000; // Размер массива (267 ms 1242MB)
+        int boundRandom = 1000; // Верхняя граница для случайных чисел
+        int countTest = 5; // Количество тестов
+        long time = 0; // Время выполнения тестов
+        Consumer<int[]> methodSort = Sort::sortArrayFrequency; // Создаем экземпляр интерфейса Consumer
 
-        for (int i = 0; i < 5; i++) {
-            randomizeArray(array, 1000);
-            long startTime = System.currentTimeMillis();
-            sortArrayFrequency(array);
-            long endTime = System.currentTimeMillis();
-            long executionTime = endTime - startTime;
-            totalTime += executionTime;
-            System.out.println("Время сортировки " + (i + 1) + ": " + executionTime + " мс");
+        // Запускаем тесты
+        for (int i = 0; i < countTest; i++)
+        {
+            long currentTime = sortArray(sizeArray, boundRandom, methodSort);
+            if (currentTime >= 0) {
+                time += currentTime;
+                System.out.println("Тест № " + (i + 1) + ": " + currentTime + " мс");
+            }
+            else {
+                time = -1;
+                break;
+            }
         }
 
-        long averageTime = totalTime / 5;
-        System.out.println("Среднее время выполнения метода: " + averageTime + " мс");
+        // Итоговый результат
+        if (time >= 0)
+            System.out.println("Среднее время выполнения: " + (time / countTest) + " мс");
+        else
+            System.out.println("Ошибка сортировки массива, алгоритм работает неверно");
     }
 
-
+    // Метод для заполнения массива случайными значениями, возвращает время выполнения метода сортировки
+    static long sortArray(int sizeArray, int boundRandom, Consumer<int[]> method)
+    {
+        long result = 0;
+        int[] array = new int[sizeArray]; // создаем контрольный массив
+        randomizeArray(array, boundRandom); // Заполняем массив случайными значениями
+        int[] testArray = Arrays.copyOf(array, array.length); // создаем тестовый массив
+        sortStandart(array); // Сортируем контрольный массив
+        long startTime = System.currentTimeMillis();
+        method.accept(testArray); // сортируем тестовый массив
+        long endTime = System.currentTimeMillis();
+        result = Arrays.equals(array, testArray) ? endTime - startTime : -1; // Вычисляем время выполнения метода сортировки
+        return result; // Возвращаем время выполнения метода сортировки
+    }
 
     // заполнение массива случайными числами
     static void randomizeArray(int array[], int bound) {
@@ -32,7 +57,8 @@ class Sort {
             array[i] = rand.nextInt(bound);
     }
 
-    static void sortArray(int array[]) {
+    // стандартная функция сортировки в JAVA
+    static void sortStandart(int array[]) {
         Arrays.sort(array);
     }
 

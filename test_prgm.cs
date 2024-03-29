@@ -4,8 +4,8 @@ public class Program
 {
     public static void Main()
     {
-        // ввести целое число с клавиатуры
-        static int ReadIntNumber(string inputMessage = "Введите целое число: ")
+        // РІРІРµСЃС‚Рё С†РµР»РѕРµ С‡РёСЃР»Рѕ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
+        static int ReadIntNumber(string inputMessage = "Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ: ")
         {
             int number = 0;
             while (true)
@@ -14,11 +14,11 @@ public class Program
                 if (int.TryParse(Console.ReadLine(), out number))
                     return number;
                 else
-                    Console.WriteLine("Ошибка! Введите целое число.");
+                    Console.WriteLine("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ.");
             }
         }
 
-        // создание массива целых чисел со случайными значениями
+        // СЃРѕР·РґР°РЅРёРµ РјР°СЃСЃРёРІР° С†РµР»С‹С… С‡РёСЃРµР» СЃРѕ СЃР»СѓС‡Р°Р№РЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё
         static int[] CreateArrayRandomInt(int size = 10, int minValue = 0, int maxValue = 100)
         {
             Random rand = new();
@@ -28,16 +28,16 @@ public class Program
             return array;
         }
 
-        // преобразовать массив в строку
+        // РїСЂРµРѕР±СЂР°Р·РѕРІР°С‚СЊ РјР°СЃСЃРёРІ РІ СЃС‚СЂРѕРєСѓ
         static string ConvertArrayToString<T>(T[] array, string delimiter = " ") where T : IFormattable
         {
             return "[" + string.Join(delimiter, array) + "]";
         }
 
-        // определение количества простых чисел в массиве
+        // РѕРїСЂРµРґРµР»РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РїСЂРѕСЃС‚С‹С… С‡РёСЃРµР» РІ РјР°СЃСЃРёРІРµ
         static int GetCountSimpleNumbers(int[] array)
         {
-            // проверка числа на простоту
+            // РїСЂРѕРІРµСЂРєР° С‡РёСЃР»Р° РЅР° РїСЂРѕСЃС‚РѕС‚Сѓ
             static bool IsSimple(int number)
             {
                 if (number < 2)
@@ -53,7 +53,7 @@ public class Program
             return count;
         }
 
-        int size = ReadIntNumber("Введите количество элементов массива: ");
+        int size = ReadIntNumber("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: ");
         int[] array = CreateArrayRandomInt(size);
         int count = GetCountSimpleNumbers(array);
         Console.WriteLine(ConvertArrayToString(array) + " => " + count);
