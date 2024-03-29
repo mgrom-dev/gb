@@ -4,3 +4,7 @@ all: sort
 
 sort: sort.c
 	gcc $(FLAGS) $<
+
+sortJava: Sort.java
+	javac $^
+	java Sort
