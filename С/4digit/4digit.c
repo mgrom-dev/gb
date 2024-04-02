@@ -11,6 +11,7 @@ void print_stings(char strings[][STR_LEN], int count);
 void sort_rows(char strings[][STR_LEN], int count);
 void swap_rows(char str1[STR_LEN], char str2[STR_LEN]);
 int compare_rows(char str1[STR_LEN], char str2[STR_LEN]);
+void remove_duplicate_rows(char strings[][STR_LEN], int count);
 int strlen(char str[STR_LEN]);
 
 int main(){
@@ -102,4 +103,12 @@ void save_rows(FILE* file, char strings[][STR_LEN], int count) {
         fwrite(strings[i], sizeof(char), l, file);
     }
     fseek(file, 0, SEEK_SET);
+}
+
+// Удаление дубликатов строк
+void remove_duplicate_rows(char strings[][STR_LEN], int count) {
+    char strings[count][STR_LEN];
+    for (int i = 1; i < count; i++) {
+        
+    }
 }
