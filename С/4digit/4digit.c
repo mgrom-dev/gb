@@ -7,7 +7,7 @@
 int count_row(FILE* file);
 void read_rows(FILE* file, char strings[][STR_LEN]);
 void save_rows(FILE* file, char strings[][STR_LEN], int count);
-void print_stings(char strings[][STR_LEN], int count);
+void print_strings(char strings[][STR_LEN], int count);
 void sort_rows(char strings[][STR_LEN], int count);
 void swap_rows(char str1[STR_LEN], char str2[STR_LEN]);
 int compare_rows(char str1[STR_LEN], char str2[STR_LEN]);
@@ -26,8 +26,8 @@ int main(){
         read_rows(file, strings);
         sort_rows(strings, count_rec);
         remove_duplicate_rows(strings, &count_rec);
-        print_stings(strings, count_rec);
-        //save_rows(file, strings, count_rec);
+        //print_strings(strings, count_rec);
+        save_rows(file, strings, count_rec);
 
         fclose(file);
     }
@@ -53,7 +53,7 @@ void read_rows(FILE* file, char strings[][STR_LEN]) {
 }
 
 // Вывод строк
-void print_stings(char strings[][STR_LEN], int count) {
+void print_strings(char strings[][STR_LEN], int count) {
     for (int i = 0; i < count; i++)
         printf("%s %d\n", strings[i], strlen(strings[i]));
 }
@@ -73,13 +73,13 @@ void swap_rows(char str1[STR_LEN], char str2[STR_LEN]) {
     char tmp[STR_LEN];
     strcopy(str1, tmp);
     strcopy(str2, str1);
-    strcopy(tmp, str1);
+    strcopy(tmp, str2);
 }
 
 // получить номер из строки
 int getNumFromRow(char str1[STR_LEN]) {
     int result;
-    if (sscanf(str1, "%*[^0-9]%d", &result) != 1) result = -1;
+    if (sscanf((const char*) str1, "%*[^0-9]%d", &result) != 1) result = -1;
     return result;
 }
 
@@ -101,12 +101,12 @@ int strlen(char str[STR_LEN]) {
 
 // Запись строк в файл
 void save_rows(FILE* file, char strings[][STR_LEN], int count) {
-    fseek(file, 0, SEEK_SET);
+    freopen(PATH, "w", file);
     for (int i = 0, l = strlen(strings[i]); i < count; i++, l = strlen(strings[i])) {
         if (i > 0) fputc('\n', file);
         fwrite(strings[i], sizeof(char), l, file);
     }
-    fseek(file, 0, SEEK_SET);
+    freopen(PATH, "r+", file);
 }
 
 // Удаление дубликатов строк
@@ -115,15 +115,14 @@ void remove_duplicate_rows(char strings[][STR_LEN], int* count) {
     char new_strings[*count][STR_LEN];
     for (int i = 0; i < *count; i++) {
         int duplicate = 0;
-        for (int j = 0; j < i - 1; j++) {
-            printf("%d %d %s %d\n", getNumFromRow(strings[i]), getNumFromRow(strings[j]), strings[j], j);
-            if (getNumFromRow(strings[i]) == getNumFromRow(strings[j])) {
-                
+        int current_number = getNumFromRow(strings[i]);
+        for (int j = 0; j < i; j++) {
+            if (current_number == getNumFromRow(strings[j])) {
                 duplicate = 1;
                 break;
             }
         }
-        if (duplicate == 0)
+       if (duplicate == 0)
             strcopy(strings[i], new_strings[index++]);
     }
     *count = index;
@@ -134,12 +133,6 @@ void remove_duplicate_rows(char strings[][STR_LEN], int* count) {
 
 // Копирование строки
 void strcopy(char resource[STR_LEN], char target[STR_LEN]) {
-    int len1 = strlen(resource), len2 = strlen(target);
-    for (int i = 0; i <= len1 || i <= len2; i++) {
-        char tmp = resource[i];
-        resource[i] = target[i];
-        target[i] = tmp;
-        if (i >= len1) target[i] = '\0';
-        if (i >= len2) resource[i] = '\0';
-    }
+    int i = 0;
+    while((target[i] = resource[i]) != '\0') i++;
 }
