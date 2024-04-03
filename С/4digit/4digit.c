@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #define PATH "./p.MD"
-#define STR_LEN 1024
+#define STR_LEN 32
 
 int count_row(FILE* file);
 void read_rows(FILE* file, char strings[][STR_LEN]);
@@ -11,8 +11,10 @@ void print_stings(char strings[][STR_LEN], int count);
 void sort_rows(char strings[][STR_LEN], int count);
 void swap_rows(char str1[STR_LEN], char str2[STR_LEN]);
 int compare_rows(char str1[STR_LEN], char str2[STR_LEN]);
-void remove_duplicate_rows(char strings[][STR_LEN], int count);
+int getNumFromRow(char str1[STR_LEN]);
+void remove_duplicate_rows(char strings[][STR_LEN], int* count);
 int strlen(char str[STR_LEN]);
+void strcopy(char resource[STR_LEN], char target[STR_LEN]);
 
 int main(){
     FILE* file = fopen(PATH, "r+");
@@ -23,8 +25,9 @@ int main(){
 
         read_rows(file, strings);
         sort_rows(strings, count_rec);
-        //print_stings(strings, count_rec);
-        save_rows(file, strings, count_rec);
+        remove_duplicate_rows(strings, &count_rec);
+        print_stings(strings, count_rec);
+        //save_rows(file, strings, count_rec);
 
         fclose(file);
     }
@@ -67,25 +70,26 @@ void sort_rows(char strings[][STR_LEN], int count) {
 
 // Поменять строки между собой местами
 void swap_rows(char str1[STR_LEN], char str2[STR_LEN]) {
-    int len1 = strlen(str1), len2 = strlen(str2);
-    for (int i = 0; i <= len1 || i <= len2; i++) {
-        char tmp = str1[i];
-        str1[i] = str2[i];
-        str2[i] = tmp;
-        if (i >= len1) str2[i] = '\0';
-        if (i >= len2) str1[i] = '\0';
-    }
+    char tmp[STR_LEN];
+    strcopy(str1, tmp);
+    strcopy(str2, str1);
+    strcopy(tmp, str1);
+}
+
+// получить номер из строки
+int getNumFromRow(char str1[STR_LEN]) {
+    int result;
+    if (sscanf(str1, "%*[^0-9]%d", &result) != 1) result = -1;
+    return result;
 }
 
 // Сравнение строк
 int compare_rows(char str1[STR_LEN], char str2[STR_LEN]) {
-    int result = 0;
-    int num1, num2;
-    if (sscanf(str1, "%*[^0-9]%d", &num1) == 1 && sscanf(str2, "%*[^0-9]%d", &num2) == 1) {
-        result = num1 > num2 ? 1 : (num1 < num2 ? -1 : 0);
-    }
-    else exit(1);
-    return result;
+    int num1 = getNumFromRow(str1);
+    int num2 = getNumFromRow(str2);
+    if (num1 == -1 || num2 == -1)
+        exit(1);
+    return num1 > num2 ? 1 : (num1 < num2 ? -1 : 0);
 }
 
 // Длина строки
@@ -106,9 +110,36 @@ void save_rows(FILE* file, char strings[][STR_LEN], int count) {
 }
 
 // Удаление дубликатов строк
-void remove_duplicate_rows(char strings[][STR_LEN], int count) {
-    char strings[count][STR_LEN];
-    for (int i = 1; i < count; i++) {
-        
+void remove_duplicate_rows(char strings[][STR_LEN], int* count) {
+    int index = 0;
+    char new_strings[*count][STR_LEN];
+    for (int i = 0; i < *count; i++) {
+        int duplicate = 0;
+        for (int j = 0; j < i - 1; j++) {
+            printf("%d %d %s %d\n", getNumFromRow(strings[i]), getNumFromRow(strings[j]), strings[j], j);
+            if (getNumFromRow(strings[i]) == getNumFromRow(strings[j])) {
+                
+                duplicate = 1;
+                break;
+            }
+        }
+        if (duplicate == 0)
+            strcopy(strings[i], new_strings[index++]);
+    }
+    *count = index;
+    for (int i = 0; i < index; i++) {
+        strcopy(new_strings[i], strings[i]);
+    }
+}
+
+// Копирование строки
+void strcopy(char resource[STR_LEN], char target[STR_LEN]) {
+    int len1 = strlen(resource), len2 = strlen(target);
+    for (int i = 0; i <= len1 || i <= len2; i++) {
+        char tmp = resource[i];
+        resource[i] = target[i];
+        target[i] = tmp;
+        if (i >= len1) target[i] = '\0';
+        if (i >= len2) resource[i] = '\0';
     }
 }

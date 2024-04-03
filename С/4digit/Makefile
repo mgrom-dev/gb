@@ -5,4 +5,4 @@ all:
 	.\a
 
 clear:
-	a.*
+	rm -rf a.*
