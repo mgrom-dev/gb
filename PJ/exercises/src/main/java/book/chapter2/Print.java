@@ -1,3 +1,5 @@
+package book.chapter2;
+
 //: net/mindview/util/Print.java
 // Print methods that can be used without
 // qualifiers, using Java SE5 static imports:

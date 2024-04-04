@@ -1,3 +1,5 @@
+package book.chapter2;
+
 /**
  * Преобразуйте пример с классом AllTheColorsOfTheRainbow в работающую
  * программу.

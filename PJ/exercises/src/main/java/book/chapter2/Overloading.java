@@ -1,7 +1,10 @@
+package book.chapter2;
+
 //: initialization/Overloading.java
 // Демонстрация перегрузки конструкторов наряду 
 // с перегрузкой обычньа методов.
 
+import static book.chapter2.Print.*;
 
 class Tree { 
     int height;

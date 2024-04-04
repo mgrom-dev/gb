@@ -1,3 +1,5 @@
+package book.chapter2;
+
 //: object/Documentation1.java
 /** Комментарий к классу */
 public class Documentation1 {
