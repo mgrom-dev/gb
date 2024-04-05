@@ -1,68 +1,81 @@
 # Определение массива строк
-SOURCES := Prg1.java HelloWorld.java ATypeName.java DataOnly.java Storage.java Incrementable.java Pack.java Args.java AllTheColorsOfTheRainbow.java
+PACKAGE := book.chapter2.
+BINPATH := bin
+DOCPATH := javadoc
+COMPILE := javac -encoding utf8 -d $(BINPATH)
+RUN := java -classpath $(BINPATH) $(PACKAGE)
+JAVADOC := javadoc -private -encoding utf8 -d $(DOCPATH)
 
 all: compile
 
-compile:
-	javac $(SOURCES)
+compile: Prg1.java HelloWorld.java ATypeName.java DataOnly.java Storage.java Incrementable.java Pack.java Args.java AllTheColorsOfTheRainbow.java
+	$(COMPILE) $^
 
 # Exercise 1
 Prg1:
-	java $@
+	$(RUN)$@
 
 # Exercise 2
 HelloWorld:
-	java $@
+	$(RUN)$@
 
 # Exercise 3
 ATypeName:
-	java $@
+	$(RUN)$@
 
 # Exercise 4, 5
 DataOnly:
-	java $@
+	$(RUN)$@
 
 # Exercise 6
 Storage:
-	java $@
+	$(RUN)$@
 
 # Exercise 7, 8
 Incrementable:
-	java $@
+	$(RUN)$@
 
 # Exercise 9
 Pack:
-	java $@
+	$(RUN)$@
 
 # Exercise 10
 Args:
-	java $@ First_param Second_param Third_param
+	$(RUN)$@ First_param Second_param Third_param
 
 # Exercise 11
 AllTheColorsOfTheRainbow:
-	java $@
+	$(RUN)$@
 
 # Exercise 12
 HelloDate:
-	javac -encoding utf8 $@.java
-	java $@
-	javadoc -encoding utf8 -d ./$@ $@.java
+	$(COMPILE) $@.java
+	$(RUN)$@
+	$(JAVADOC)/$@ $@.java
 
 # Exercise 13
 Documentation:
-	javadoc -private -encoding utf8 -d ./$@ $@*.java
+	$(JAVADOC)/$@ $@*.java
 
 # Exercise 14
 DocumentationHTML:
-	javadoc -private -encoding utf8 -d ./$@ $@.java
+	$(JAVADOC)/$@ $@.java
 
 # Exercise 15
 HelloWorldJavaDoc:
-	javadoc -private -encoding utf8 -d ./$@ $@.java
+	$(COMPILE) $@.java
+	$(RUN)$@
+	$(JAVADOC)/$@ $@.java
+
+# Exercise 16
+Overloading: Print.java
+	$(COMPILE) $@.java $^
+	$(RUN)$@
+	$(JAVADOC)/$@ $@.java $^
 
 # пример создания документации к файлу
 javadoc:
 	javadoc -encoding UTF-8 -d ./javadoc Prg1.java
 
 clean:
-	rm -rf *.class *.js *.css *.html ./Documentation/ ./javadoc/ ./HelloDate/ ./DocumentationHTML/ ./HelloWorldJavaDoc/ ./legal/ ./resources/ ./script-dir/ ./element-list
+	rm -rf $(BINPATH) $(DOCPATH)

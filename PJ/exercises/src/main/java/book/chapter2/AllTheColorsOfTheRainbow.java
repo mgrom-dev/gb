@@ -1,8 +1,8 @@
 package book.chapter2;
 
 /**
- * Преобразуйте пример с классом AllTheColorsOfTheRainbow в работающую
- * программу.
+ * РџСЂРµРѕР±СЂР°Р·СѓР№С‚Рµ РїСЂРёРјРµСЂ СЃ РєР»Р°СЃСЃРѕРј AllTheColorsOfTheRainbow РІ СЂР°Р±РѕС‚Р°СЋС‰СѓСЋ
+ * РїСЂРѕРіСЂР°РјРјСѓ.
  */
 public class AllTheColorsOfTheRainbow {
     int anIntegerRepresentingColors;

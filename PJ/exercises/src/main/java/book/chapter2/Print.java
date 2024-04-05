@@ -5,23 +5,45 @@ package book.chapter2;
 // qualifiers, using Java SE5 static imports:
 import java.io.*;
 
+/**
+ * Класс Print предоставляет утилиты для вывода информации в консоль.
+ */
 public class Print {
-  // Print with a newline:
+  /**
+   * Выводит объект в консоль с последующим переводом строки.
+   * 
+   * @param obj объект, который нужно вывести
+   */
   public static void print(Object obj) {
     System.out.println(obj);
   }
-  // Print a newline by itself:
+
+  /**
+   * Выводит перевод строки в консоль.
+   */
   public static void print() {
     System.out.println();
   }
-  // Print with no line break:
+
+  /**
+   * Выводит объект в консоль без последующего перевода строки.
+   * 
+   * @param obj объект, который нужно вывести
+   */
   public static void printnb(Object obj) {
     System.out.print(obj);
   }
-  // The new Java SE5 printf() (from C):
-  public static PrintStream
-  printf(String format, Object... args) {
+
+  /**
+   * Предоставляет функциональность форматированного вывода, аналогичную функции
+   * printf из языка программирования C.
+   * 
+   * @param format строка формата
+   * @param args   аргументы для форматирования
+   * @return объект типа PrintStream для дальнейшего вывода
+   */
+  public static PrintStream printf(String format, Object... args) {
     return System.out.printf(format, args);
   }
-} 
-///:~
+}
+/// :~
