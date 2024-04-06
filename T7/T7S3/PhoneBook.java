@@ -186,27 +186,33 @@ class Record {
     public char getGender() {
         return gender;
     }
+
+    @Override
+    public String toString() {
+        return family + " " + name + " " + surname + " "
+                + new SimpleDateFormat("dd.MM.yyyy").format(birthday) + " "
+                + number + " " + gender + "\n";
+    }
 }
 
 public class PhoneBook {
     public static void main(String[] args) {
-        System.out.println("Введите данные для записи в справочник, в формате: Ф И О дд.мм.гггг номер_телефона пол(f/m).");
+        System.out.println(
+                "Введите данные для записи в справочник, в формате: Ф И О дд.мм.гггг номер_телефона пол(f/m).");
         System.out.println("Для выхода введите 'q'.");
         try (Scanner scan = new Scanner(System.in)) {
             String line;
             while (!(line = scan.nextLine()).toLowerCase().equals("q")) {
-                Record record = Record.parse(line);
-                String fileName = record.getFamily() + ".txt";
-                FileWriter writer = new FileWriter(fileName, true);
-                writer.write(record.getFamily() + " " + record.getName() + " " + record.getSurname() + " "
-                        + new SimpleDateFormat("dd.MM.yyyy").format(record.getBirthday()) + " "
-                        + record.getNumber() + " " + record.getGender() + "\n");
-                writer.close();
-                System.out.println("Введите следующую запись:");
+                try {
+                    Record record = Record.parse(line);
+                    try (FileWriter writer = new FileWriter(record.getFamily() + ".txt", true)) {
+                        writer.write(record + "");
+                    }
+                } catch (IllegalArgumentException | IOException ex) {
+                    ex.printStackTrace();
+                }
+                System.out.println("Введите следующую запись, или 'q' для выхода:");
             }
-        } catch (IOException e) {
-            System.out.println("Данные не удалось записать в файл.");
-            e.printStackTrace();
         }
     }
 }
