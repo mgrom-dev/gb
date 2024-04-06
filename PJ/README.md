@@ -1,7 +1,7 @@
 ## Философия JAVA - БРЮС ЭККЕЛЬ
 стр. 94
 
-### Упражнения с учебника (exercises):
+### Упражнения с учебника (exercises/src/main/java/book):
 - (chapter2) Глава 2. Все является объектом
 ### Ссылки:
 - [Книги и учебные материалы по Java, Kotlin, Scala, C, C++ (МindView)](https://www.mindviewllc.com/)
