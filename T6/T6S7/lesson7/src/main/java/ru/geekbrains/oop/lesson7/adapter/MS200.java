@@ -10,7 +10,7 @@ public class MS200 implements MeteoSensor  {
     private Random random = new Random();
 
     public MS200(){
-        id = random.nextInt(10001, 99999);
+        id = 10001 + random.nextInt(89998);
     }
 
 

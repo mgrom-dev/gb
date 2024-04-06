@@ -1,7 +1,5 @@
 package ru.geekbrains.oop.lesson7.adapter;
 
-import java.time.LocalDateTime;
-
 public class MeteoStore {
 
     boolean save(MeteoSensor meteoSensor){

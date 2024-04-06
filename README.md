@@ -125,6 +125,30 @@
     <i>Принципы ООП c JAVA</i>
 </blockquote></details>
 
+<details><summary><b>T7 - Исключения в программировании и их обработка</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T7/T7L2">[T7L2]</a> - Урок 2. Исключения и их обработка</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T7/T7L3">[T7L3]</a> - Урок 3. Продвинутая работа с исключениями в Java</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T7/T7S1">[T7S1]</a> - Урок 1. Обработка ошибок в программировании</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T7/T7S2">[T7S2]</a> - Урок 2. Исключения и их обработка</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T7/T7S3">[T7S3]</a> - Урок 3. Продвинутая работа с исключениями в Java</li>
+    </blockquote>
+    </details>
+    <i>Работа с исключениями в JAVA</i>
+</blockquote></details>
+
+<details><summary><b>T8 - Исключения в программировании и их обработка</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T8/T8L1">[T8L1]</a> - Урок 1. Механизм пространства имён</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+    </blockquote>
+    </details>
+    <i>Контейниризация, linux, docker, kubernetes</i>
+</blockquote></details>
+
 ----------
 ### Используемые материалы: ###
 -   <details><summary><b>Литература</b></summary><blockquote>
