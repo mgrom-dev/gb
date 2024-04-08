@@ -1,12 +1,17 @@
-## Философия JAVA - БРЮС ЭККЕЛЬ
-стр. 94
+## Р¤РёР»РѕСЃРѕС„РёСЏ JAVA - Р‘Р Р®РЎ Р­РљРљР•Р›Р¬
+СЃС‚СЂ. 94
 
-### Упражнения с учебника (exercises/src/main/java/book):
-- (chapter2) Глава 2. Все является объектом (стр. 70)
-- (chapter3) Глава 3. Операторы (стр. 96)
-- (chapter4) Глава 4. Управляющие конструкции (стр. 128)
-### Ссылки:
-- [Книги и учебные материалы по Java, Kotlin, Scala, C, C++ (МindView)](https://www.mindviewllc.com/)
-- [Загрузка JAVA SDK (Javasun)](https://www.oracle.com/java/technologies/downloads/)
-- [Философия JAVA (Брюс Эккель)](https://drive.google.com/file/d/1mQzuKSg5fvzxFiRR5-Eg1zKa-tWZauaw/view?usp=sharing)
-- [Гитхаб с примерами из книжки Философия JAVA](https://github.com/BruceEckel/TIJ4-code/tree/master)
+### РЈРїСЂР°Р¶РЅРµРЅРёСЏ СЃ СѓС‡РµР±РЅРёРєР° (exercises/src/main/java/book):
+- (chapter2) Р“Р»Р°РІР° 2. Р’СЃРµ СЏРІР»СЏРµС‚СЃСЏ РѕР±СЉРµРєС‚РѕРј (СЃС‚СЂ. 70)
+- (chapter3) Р“Р»Р°РІР° 3. РћРїРµСЂР°С‚РѕСЂС‹ (СЃС‚СЂ. 96)
+- (chapter4) Р“Р»Р°РІР° 4. РЈРїСЂР°РІР»СЏСЋС‰РёРµ РєРѕРЅСЃС‚СЂСѓРєС†РёРё (СЃС‚СЂ. 128)
+
+### РЎСЃС‹Р»РєРё:
+- [РљРЅРёРіРё Рё СѓС‡РµР±РЅС‹Рµ РјР°С‚РµСЂРёР°Р»С‹ РїРѕ Java, Kotlin, Scala, C, C++ (РњindView)](https://www.mindviewllc.com/)
+- [Р—Р°РіСЂСѓР·РєР° JAVA SDK (Javasun)](https://www.oracle.com/java/technologies/downloads/)
+- [Р¤РёР»РѕСЃРѕС„РёСЏ JAVA (Р‘СЂСЋСЃ Р­РєРєРµР»СЊ)](https://drive.google.com/file/d/1mQzuKSg5fvzxFiRR5-Eg1zKa-tWZauaw/view?usp=sharing)
+- [Р“РёС‚С…Р°Р± СЃ РїСЂРёРјРµСЂР°РјРё РёР· РєРЅРёР¶РєРё Р¤РёР»РѕСЃРѕС„РёСЏ JAVA](https://github.com/BruceEckel/TIJ4-code/tree/master)
+
+### Р—Р°РјРµС‚РєРё:
+- РєРѕРјРїРёР»СЏС‚РѕСЂ JavР° РїСЂРѕРёР·РІРѕРґРёС‚ СЃРІРѕР№ СЃРѕР±СЃС‚РІРµРЅРЅС‹Р№ В«Р°СЃСЃРµРјР±Р»РµСЂРЅС‹Р№В» РєРѕРґ, РЅРѕ РїРѕСЃР»РµРґРЅРёР№ РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РІРёСЂС‚СѓР°Р»СЊРЅРѕР№ РјР°С€РёРЅРѕР№ Java, Р° РЅРµ Р°РїРїР°СЂР°С‚РЅС‹Рј РїСЂРѕС†РµСЃСЃРѕСЂРѕРј.
+- РІ Java РµСЃС‚СЊ РјРµС‚РєРё РґР»СЏ С†РёРєР»РѕРІ, РїСЂРёРјРµСЂ РїСЂРѕРіСЂР°РјРјС‹ СЃ РјРµС‚РєР°РјРё chapter4 LabeledFor.java

@@ -35,6 +35,25 @@ IfElse2:
 	$(COMPILE) $@.java ..\chapter2\Print.java
 	$(RUN)$@
 
+# Exercise 7
+BreakContinue:
+	$(COMPILE) $@.java Range.java
+	$(RUN)$@
+
+# Example label in JAVA
+LabeledFor:
+	$(COMPILE) $@.java ..\chapter2\Print.java
+	$(RUN)$@
+
+# Exercise 8
+VowelsAndConsonants:
+	$(COMPILE) $@.java ..\chapter2\Print.java
+	$(RUN)$@
+
+# Exercise 9
+Fibonacci:
+	$(COMPILE) $@.java
+	$(RUN)$@ 5
 
 clean:
 	rm -rf $(BINPATH)
