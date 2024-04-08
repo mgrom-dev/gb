@@ -27,3 +27,5 @@ resize2fs /dev/ubuntu-vg/ubuntu-lv
 # и nameserver 8.8.4.4 в файл:
 nano /etc/resolv.conf
 ```
+
+Путь по умолчанию куда скачиваются образы системы для lxc `/var/cache/lxc/`
