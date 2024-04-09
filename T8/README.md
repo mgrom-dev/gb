@@ -29,3 +29,15 @@ nano /etc/resolv.conf
 ```
 
 Путь по умолчанию куда скачиваются образы системы для lxc `/var/cache/lxc/`
+
+```bash
+# установка powershell for Windows последней версии
+# поиск версии:
+winget search Microsoft.PowerShell
+Имя                ИД                           Версия  Источник
+-----------------------------------------------------------------
+PowerShell         Microsoft.PowerShell         7.4.1.0 winget
+PowerShell Preview Microsoft.PowerShell.Preview 7.5.0.2 winget
+# установка
+winget install --id Microsoft.Powershell --source winget
+```

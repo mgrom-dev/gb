@@ -37,7 +37,7 @@ cat /example/test.txt
 docker run -d --name mariadb --env MARIADB_ROOT_PASSWORD=12345678 mariadb
 docker run --name phpmyadmin -d --link mariadb:db -p 8081:80 phpmyadmin/phpmyadmin
 docker ps -a
-docket exec -it phpmyadmin bash
+docker exec -it phpmyadmin bash
 cat /etc/hosts
 ```
 Примеры кодов статусов docker (в зависимости от версии контейнера, статусы бывают разные)
@@ -50,3 +50,24 @@ cat /etc/hosts
 Добавить в контейнер hostname такой же, как hostname системы через переменную.  
 Заполнить БД данными через консоль.  
 Запустить phpmyadmin (в контейнере) и через веб проверить, что все введенные данные доступны.
+```bash
+docker run --name testmysql -h PCHome -e MYSQL_ROOT_PASSWORD=passwd -d mysql
+docker exec -it testmysql bash
+mysql -u root --password=passwd
+CREATE DATABASE IF NOT EXISTS mydatabase;
+USE mydatabase;
+CREATE TABLE IF NOT EXISTS system_info (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    hostname VARCHAR(255) NOT NULL,
+    param VARCHAR(255) NOT NULL,
+    value VARCHAR(255) NOT NULL
+);
+exit
+mysql -u root --password=passwd -e "USE mydatabase; INSERT INTO system_info (hostname, param, value) VALUES ('$HOSTNAME', 'mysql version', '$(mysql --version)');"
+mysql -u root --password=passwd -e "USE mydatabase; INSERT INTO system_info (hostname, param, value) VALUES ('$HOSTNAME', 'system version', '$(cat /etc/*-release | grep "PRETTY_NAME")');"
+exit
+docker run --name phpmyadmin -d --link testmysql:db -p 8081:80 phpmyadmin/phpmyadmin
+docker ps -a
+docker exec -it phpmyadmin bash
+cat /etc/hosts
+```
