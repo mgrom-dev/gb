@@ -55,5 +55,15 @@ Fibonacci:
 	$(COMPILE) $@.java
 	$(RUN)$@ 5
 
+# Test C
+VampireC:
+	gcc -Werror -Wall -Wextra -std=c11 Vampire.c
+	.\a.exe
+
+# Exercise 10
+Vampire:
+	$(COMPILE) $@.java
+	$(RUN)$@
+
 clean:
 	rm -rf $(BINPATH)

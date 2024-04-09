@@ -1,8 +1,6 @@
 package book.chapter4;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 
 /**
  * Вампирами называются числа, состоящие из четного количества цифр и полученные
@@ -17,27 +15,28 @@ import java.util.HashSet;
  */
 public class Vampire {
     public static void main(String[] args) {
-
-    }
-
-    static int[] getClaws(int number) {
-        ArrayList<Integer> numbers = new ArrayList<>();
-        ArrayList<Integer> claws = new ArrayList<>();
-        int length = 0;
-        for (; number > 0; number /= 10, length++)
-            numbers.add(number % 10);
-        getClaws(null, numbers, length, claws);
-        return claws.stream().mapToInt(Integer::intValue).toArray();
-    }
-
-    /**
-     * Рекурсивная функция для получения чисел клыков
-     * @param number - текущее число
-     * @param numbers - паттерн чисел, из которых будет составляться число клык
-     * @param length - количество цифр в числе клык
-     * @param result - сюда будут добавляться составленные числа
-     */
-    static void getClaws(Integer number, ArrayList<Integer> numbers, int length, ArrayList<Integer> result) {
-
+        int val = 0;
+        String[] str1 = null;
+        String[] str2 = null;
+        int count = 0; // количество операций
+        int sum = 0; // количество номеров вампиров
+        for (int i = 10; i < 100; i++) {
+            for (int j = i + 1; j < 100; j++) {
+                val = i * j;
+                if (val < 1000 || val > 9999)
+                    continue;
+                count++;
+                str1 = String.valueOf(val).split("");
+                str2 = (String.valueOf(i) + String.valueOf(j)).split("");
+                Arrays.sort(str1);
+                Arrays.sort(str2);
+                if (Arrays.equals(str1, str2)) {
+                    sum++;
+                    System.out.println(sum + ". Число вампир: " + i + " * " + j + " = " + val);
+                }
+            }
+        }
+        System.out.println("Количество проверок " + count);
+        System.out.println("Количество найденных чисел вампиров: " + sum);
     }
 }
