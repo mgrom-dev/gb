@@ -70,3 +70,24 @@ curl localhost:8081
 Необходимо открыть порт для коммуникации с другими сущностями.  
 Для проверки решения необходимо подключить к такому контейнеру phpmyadmin.   Необходимо, чтобы в нем вы увидели данные из вашей БД.  
 Также при запуске необходимо смонтировать внешнюю папку для хранения данных БД вне контейнера
+
+2. Вариант  
+Задание: необходимо создать Dockerfile, основанный на любом образе (вы в праве выбрать самостоятельно). В него необходимо поместить приложение, написанное на любом известном вам языке программирования (Python, Java, C, С#, C++). При запуске контейнера должно запускаться самостоятельно написанное приложение.
+```bash
+# Dockerfile
+FROM alpine:3.19.1
+LABEL maintainer="mgrom-dev"
+LABEL version="1.0"
+ADD https://raw.githubusercontent.com/mgrom-dev/gb/main/PJ/exercises/src/main/java/book/chapter4/Vampire.c /home/vampire.c
+RUN apk add --no-cache gcc && \
+    apk add --no-cache libc-dev && \
+    gcc /home/vampire.c -o /bin/vampire && \
+    apk info --installed | grep -E '^gcc' | cut -d ' ' -f 1 | xargs apk del && \
+    apk del gcc && \
+    rm -rf /var/cache/apk/
+CMD ["vampire"]
+# посмотреть список установленных файлов: apk info -L gcc
+# сборка Dockerfile
+docker build -t vampire:1.0 .
+docker run vampire:1.0
+```
