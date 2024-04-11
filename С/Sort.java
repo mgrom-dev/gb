@@ -3,24 +3,24 @@ import java.util.Random;
 import java.util.function.Consumer;
 
 /**
- * Программа для сравнения эффективности алгоритмов сортировки
+ * РџСЂРѕРіСЂР°РјРјР° РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ СЌС„С„РµРєС‚РёРІРЅРѕСЃС‚Рё Р°Р»РіРѕСЂРёС‚РјРѕРІ СЃРѕСЂС‚РёСЂРѕРІРєРё
  */
 class Sort {
     public static void main(String[] args) {
-        // Задаем параметры для функции
-        int sizeArray = 100000000; // Размер массива (267 ms 1242MB)
-        int boundRandom = 1000; // Верхняя граница для случайных чисел
-        int countTest = 5; // Количество тестов
-        long time = 0; // Время выполнения тестов
-        Consumer<int[]> methodSort = Sort::sortArrayFrequency; // Создаем экземпляр интерфейса Consumer
+        // Р—Р°РґР°РµРј РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ С„СѓРЅРєС†РёРё
+        int sizeArray = 100000000; // Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР° (267 ms 1242MB)
+        int boundRandom = 1000; // Р’РµСЂС…РЅСЏСЏ РіСЂР°РЅРёС†Р° РґР»СЏ СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР»
+        int countTest = 5; // РљРѕР»РёС‡РµСЃС‚РІРѕ С‚РµСЃС‚РѕРІ
+        long time = 0; // Р’СЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ С‚РµСЃС‚РѕРІ
+        Consumer<int[]> methodSort = Sort::sortArrayFrequency; // РЎРѕР·РґР°РµРј СЌРєР·РµРјРїР»СЏСЂ РёРЅС‚РµСЂС„РµР№СЃР° Consumer
 
-        // Запускаем тесты
+        // Р—Р°РїСѓСЃРєР°РµРј С‚РµСЃС‚С‹
         for (int i = 0; i < countTest; i++)
         {
             long currentTime = sortArray(sizeArray, boundRandom, methodSort);
             if (currentTime >= 0) {
                 time += currentTime;
-                System.out.println("Тест № " + (i + 1) + ": " + currentTime + " мс");
+                System.out.println("РўРµСЃС‚ в„– " + (i + 1) + ": " + currentTime + " РјСЃ");
             }
             else {
                 time = -1;
@@ -28,36 +28,36 @@ class Sort {
             }
         }
 
-        // Итоговый результат
+        // РС‚РѕРіРѕРІС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚
         if (time >= 0)
-            System.out.println("Среднее время выполнения: " + (time / countTest) + " мс");
+            System.out.println("РЎСЂРµРґРЅРµРµ РІСЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ: " + (time / countTest) + " РјСЃ");
         else
-            System.out.println("Ошибка сортировки массива, алгоритм работает неверно");
+            System.out.println("РћС€РёР±РєР° СЃРѕСЂС‚РёСЂРѕРІРєРё РјР°СЃСЃРёРІР°, Р°Р»РіРѕСЂРёС‚Рј СЂР°Р±РѕС‚Р°РµС‚ РЅРµРІРµСЂРЅРѕ");
     }
 
-    // Метод для заполнения массива случайными значениями, возвращает время выполнения метода сортировки
+    // РњРµС‚РѕРґ РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё, РІРѕР·РІСЂР°С‰Р°РµС‚ РІСЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ РјРµС‚РѕРґР° СЃРѕСЂС‚РёСЂРѕРІРєРё
     static long sortArray(int sizeArray, int boundRandom, Consumer<int[]> method)
     {
         long result = 0;
-        int[] array = new int[sizeArray]; // создаем контрольный массив
-        randomizeArray(array, boundRandom); // Заполняем массив случайными значениями
-        int[] testArray = Arrays.copyOf(array, array.length); // создаем тестовый массив
-        sortStandart(array); // Сортируем контрольный массив
+        int[] array = new int[sizeArray]; // СЃРѕР·РґР°РµРј РєРѕРЅС‚СЂРѕР»СЊРЅС‹Р№ РјР°СЃСЃРёРІ
+        randomizeArray(array, boundRandom); // Р—Р°РїРѕР»РЅСЏРµРј РјР°СЃСЃРёРІ СЃР»СѓС‡Р°Р№РЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё
+        int[] testArray = Arrays.copyOf(array, array.length); // СЃРѕР·РґР°РµРј С‚РµСЃС‚РѕРІС‹Р№ РјР°СЃСЃРёРІ
+        sortStandart(array); // РЎРѕСЂС‚РёСЂСѓРµРј РєРѕРЅС‚СЂРѕР»СЊРЅС‹Р№ РјР°СЃСЃРёРІ
         long startTime = System.currentTimeMillis();
-        method.accept(testArray); // сортируем тестовый массив
+        method.accept(testArray); // СЃРѕСЂС‚РёСЂСѓРµРј С‚РµСЃС‚РѕРІС‹Р№ РјР°СЃСЃРёРІ
         long endTime = System.currentTimeMillis();
-        result = Arrays.equals(array, testArray) ? endTime - startTime : -1; // Вычисляем время выполнения метода сортировки
-        return result; // Возвращаем время выполнения метода сортировки
+        result = Arrays.equals(array, testArray) ? endTime - startTime : -1; // Р’С‹С‡РёСЃР»СЏРµРј РІСЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ РјРµС‚РѕРґР° СЃРѕСЂС‚РёСЂРѕРІРєРё
+        return result; // Р’РѕР·РІСЂР°С‰Р°РµРј РІСЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ РјРµС‚РѕРґР° СЃРѕСЂС‚РёСЂРѕРІРєРё
     }
 
-    // заполнение массива случайными числами
+    // Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
     static void randomizeArray(int array[], int bound) {
         Random rand = new Random();
         for (int i = 0; i < array.length; i++)
             array[i] = rand.nextInt(bound);
     }
 
-    // стандартная функция сортировки в JAVA
+    // СЃС‚Р°РЅРґР°СЂС‚РЅР°СЏ С„СѓРЅРєС†РёСЏ СЃРѕСЂС‚РёСЂРѕРІРєРё РІ JAVA
     static void sortStandart(int array[]) {
         Arrays.sort(array);
     }
@@ -75,7 +75,7 @@ class Sort {
         }
         freq_size++;
 
-        // на основе созданного массива повторов, заполняем итоговый массив
+        // РЅР° РѕСЃРЅРѕРІРµ СЃРѕР·РґР°РЅРЅРѕРіРѕ РјР°СЃСЃРёРІР° РїРѕРІС‚РѕСЂРѕРІ, Р·Р°РїРѕР»РЅСЏРµРј РёС‚РѕРіРѕРІС‹Р№ РјР°СЃСЃРёРІ
         for (int i = 0, index = 0; i < freq_size; i++)
         {
             for (int r = 0; r < frequency_array[i]; r++)
