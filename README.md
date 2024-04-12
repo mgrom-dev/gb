@@ -139,7 +139,7 @@
     <i>Работа с исключениями в JAVA</i>
 </blockquote></details>
 
-<details><summary><b>T8 - Исключения в программировании и их обработка</b></summary><blockquote>
+<details><summary><b>T8 - Контейниризация, linux, docker, kubernetes</b></summary><blockquote>
     <details><summary><U>Лекции</u></summary><blockquote>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T8/T8L1">[T8L1]</a> - Урок 1. Механизм пространства имён</li>
     </blockquote></details>

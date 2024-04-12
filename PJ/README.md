@@ -13,6 +13,12 @@
 - [Философия JAVA (Брюс Эккель)](https://drive.google.com/file/d/1mQzuKSg5fvzxFiRR5-Eg1zKa-tWZauaw/view?usp=sharing)
 - [Гитхаб с примерами из книжки Философия JAVA](https://github.com/BruceEckel/TIJ4-code/tree/master)
 - [Тинькофф](https://www.tinkoff.ru/career/it/about/?utm_source=telegram&utm_medium=ntv.fix&utm_campaign=career.it_about.partners&utm_term=progeri&erid=2Vtzqw3ymyg)
+- [Яндекс](https://crowd.yandex.ru/back_office/lid_razrab)
+- [Совкомбанк](https://t.me/SovcomStudents)
+- [МТС](https://job.mts.ru/internship)
+- [Yadro](https://t.me/YadroEventBot)[careers](https://careers.yadro.com/)
+- [Альфа](https://t.me/alfastudents)
+- [Уралсиб](https://t.me/students_uralsib)
 
 ### Заметки:
 - компилятор Javа производит свой собственный «ассемблерный» код, но последний выполняется виртуальной машиной Java, а не аппаратным процессором.
