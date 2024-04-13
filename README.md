@@ -169,7 +169,8 @@
     <a href="https://drive.google.com/file/d/1mQzuKSg5fvzxFiRR5-Eg1zKa-tWZauaw/view?usp=sharing">"Философия JAVA" (Брюс Эккель) [2015 год]</a><br>
     </blockquote></details>
 
--   <details><summary><b>Ссылки</b></summary><blockquote>
+    <details><summary><b>Ссылки</b></summary><blockquote>
+    <a href="https://roadmap.sh/">roadmap</a> - карта скиллов<br>
     <a href="https://app.diagrams.net/">Diagrams</a> - создание блок-схем<br>
     <a href="https://www.notion.so/">Notion</a> - заметки, блокнот<br>
     <a href="https://obsidian.md/">Obsidian</a> - заметки, блокнот<br>
