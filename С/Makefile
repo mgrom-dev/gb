@@ -21,5 +21,11 @@ helloWorldAsm:
 	ld hello_world.o -o hello_world.exe -L C:\Windows\System32 -l kernel32
 	.\hello_world.exe
 
+# Sort на Asm
+sortAsm:
+	.\nasm-2.16.01\nasm.exe -f win64 sort.asm -o sort.o
+	ld sort.o -o sort.exe -L C:\Windows\System32 -l kernel32 advapi32
+	.\sort.exe
+
 clean:
 	rm -rf *.exe *.o *.obj
