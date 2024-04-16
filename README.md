@@ -170,6 +170,7 @@
     </blockquote></details>
 
     <details><summary><b>Ссылки</b></summary><blockquote>
+    <a href="https://git.io/ac-wiki/">рунет</a> - обход блокировок<br>
     <a href="https://roadmap.sh/">roadmap</a> - карта скиллов<br>
     <a href="https://app.diagrams.net/">Diagrams</a> - создание блок-схем<br>
     <a href="https://www.notion.so/">Notion</a> - заметки, блокнот<br>

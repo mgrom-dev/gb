@@ -27,5 +27,10 @@ sortAsm:
 	ld sort.o -o sort.exe -L C:\Windows\System32 -l kernel32 advapi32
 	.\sort.exe
 
+# Sort with threads in C
+sortThreadC: bubble_sort_threads.c
+	gcc $(FLAGS) $< -o ./$@.exe -pthread
+	./$@.exe
+
 clean:
 	rm -rf *.exe *.o *.obj
