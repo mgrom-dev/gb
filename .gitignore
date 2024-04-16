@@ -5,3 +5,12 @@
 *.class
 *.exe
 *.o
+*.dll
+*.dylib
+*.so
+*.log
+*.cache
+*.FileListAbsolute.txt
+*.pdb
+*.Up2Date
+*.editorconfig
