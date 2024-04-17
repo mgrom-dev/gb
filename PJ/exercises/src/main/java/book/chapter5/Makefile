@@ -30,5 +30,30 @@ Class4:
 	$(COMPILE) $@.java
 	$(RUN)$@
 
+# Exercise 8
+Class5:
+	$(COMPILE) $@.java
+	$(RUN)$@
+
+# Exercise 9
+Class6:
+	$(COMPILE) $@.java
+	$(RUN)$@
+
+# Exercise 10, 11, 12
+Class7:
+	$(COMPILE) $@.java
+	$(RUN)$@
+
+# Exercise 13, 14
+Class8:
+	$(COMPILE) $@.java ..\chapter2\Print.java
+	$(RUN)$@
+
+# Exercise 15, 16, 17, 18
+MyString:
+	$(COMPILE) $@.java
+	$(RUN)$@
+
 clean:
 	rm -rf $(BINPATH)
