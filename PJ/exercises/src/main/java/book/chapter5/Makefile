@@ -55,5 +55,15 @@ MyString:
 	$(COMPILE) $@.java
 	$(RUN)$@
 
+# Exercise 19, 20
+Class9:
+	$(COMPILE) $@.java
+	$(RUN)$@
+
+# Exercise 21, 22
+Money:
+	$(COMPILE) $@.java
+	$(RUN)$@
+
 clean:
 	rm -rf $(BINPATH)
