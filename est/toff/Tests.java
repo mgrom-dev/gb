@@ -10,7 +10,24 @@ import java.util.function.Consumer;
 public class Tests {
     public static void main(String[] args) {
         clearOutput();
-        task3v2();
+        task4();
+    }
+
+    /**
+     * Задача D. Бумажка с числами
+     */
+    static void task4() {
+        String[] cases = {
+                "5 2\n1 2 1 3 5",
+                "3 1\n99 5 85",
+                "1 10\n9999"
+        };
+        String[] expected = {
+                "16",
+                "10",
+                "0"
+        };
+        test(cases, expected, Task4::main);
     }
 
     /**
