@@ -10,7 +10,24 @@ import java.util.function.Consumer;
 public class Tests {
     public static void main(String[] args) {
         clearOutput();
-        task4();
+        task5();
+    }
+
+    /**
+     * Задача E. Тестирование
+     */
+    static void task5() {
+        String[] cases = {
+                "4 7",
+                "10 100",
+                "1 " + Long.MAX_VALUE
+        };
+        String[] expected = {
+                "4",
+                "9",
+                "170"
+        };
+        test(cases, expected, Task5::main);
     }
 
     /**

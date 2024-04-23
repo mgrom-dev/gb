@@ -38,7 +38,8 @@
         <li><a href="https://learngitbranching.js.org/?locale=ru_RU">Интерактивный учебник Git</a></li>
     </blockquote>
     </details>
-    <i>Знакомимся с контролем версии Git (установка, настройка, комманды управления). Работаем с локальными и удаленными репозиториями. Изучаем GitHub, коммандная работа, Fork, pull request. </i>
+    <i>Знакомимся с контролем версии Git (установка, настройка, комманды управления). Работаем с локальными и удаленными репозиториями. Изучаем GitHub, коммандная работа, Fork, pull request. </i><br>
+    <i><a href="https://lms.merionet.ru/course/view.php?id=44">merionet git</a></i>
 </blockquote></details>
 
 <details><summary><b>T3 - Знакомство с языками программирования</b></summary><blockquote>
