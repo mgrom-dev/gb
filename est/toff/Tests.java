@@ -8,9 +8,25 @@ import java.util.function.Consumer;
  * Тестирование программ
  */
 public class Tests {
+    public static long bytesToMegabytes(long bytes) {
+        return bytes / (1024L * 1024L);
+    }
+
+    public static long bytesToKilobytes(long bytes) {
+        return bytes / 1024L;
+    }
+
     public static void main(String[] args) {
         clearOutput();
+        long startTime = System.currentTimeMillis();
         task5();
+        long stopTime = System.currentTimeMillis();
+        long elapsedTime = stopTime - startTime;
+        Runtime runtime = Runtime.getRuntime();
+        runtime.gc();
+        long memory = runtime.totalMemory() - runtime.freeMemory();
+        System.out.println("Used memory is kilobytes: " + bytesToKilobytes(memory));
+        System.out.println(elapsedTime + " ms");
     }
 
     /**
@@ -18,16 +34,18 @@ public class Tests {
      */
     static void task5() {
         String[] cases = {
+                "1 9",
                 "4 7",
                 "10 100",
                 "1 " + Long.MAX_VALUE
         };
         String[] expected = {
+                "9",
                 "4",
                 "9",
                 "170"
         };
-        test(cases, expected, Task5::main);
+        test(cases, expected, Task5v2::main);
     }
 
     /**
