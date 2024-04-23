@@ -20,5 +20,10 @@ Class5:
 	$(COMPILE) $@.java .\acess\Widget.java .\acess\Utils.java 
 	$(RUN)$@
 
+# Exercise 8
+ConnectionManager:
+	$(COMPILE) $@.java
+	$(RUN)$@
+
 clean:
 	rm -rf $(BINPATH)
