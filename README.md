@@ -168,6 +168,7 @@
     <a href="https://drive.google.com/file/d/12W-JPaIQmbs5E8LzBaHHsaKAURB1cBXJ/view?usp=sharing">"Системы баз данных" (Гектор Гарсиа-Молина, Джеффри Ульман, Дженнифер Уидом) [2003 год]</a><br>
     <a href="https://drive.google.com/file/d/12Il9N7AYOFEOcLSNCcwk6CRzcEXG3bfZ/view?usp=sharing">"Секреты Oracle SQL" (Санжей Мишра, Алан Бьюли) [2003 год]</a><br>
     <a href="https://drive.google.com/file/d/1mQzuKSg5fvzxFiRR5-Eg1zKa-tWZauaw/view?usp=sharing">"Философия JAVA" (Брюс Эккель) [2015 год]</a><br>
+    <a href="https://drive.google.com/file/d/1A3Z_Z-zawc2LQcgAGdBdvAqxYTrszxnu/view?usp=sharing">"Алгоритмы построение и анализ" (Томас Кормен) [2011 год]</a><br>
     </blockquote></details>
 
     <details><summary><b>Ссылки</b></summary><blockquote>
