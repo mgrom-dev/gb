@@ -1,0 +1,7 @@
+services:
+    app:
+        image: bellsoft/liberica-openjdk-alpine:11.0.16.1-1
+        command: javac -sourcepath /app/src -d /app/out /app/src/ru/mgrom/Main.java
+        volumes:
+            - ./ourclasses:/app/out
+            - ./:/app/src

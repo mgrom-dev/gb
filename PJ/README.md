@@ -15,6 +15,8 @@
 - [Философия JAVA (Брюс Эккель)](https://drive.google.com/file/d/1mQzuKSg5fvzxFiRR5-Eg1zKa-tWZauaw/view?usp=sharing)
 - [Гитхаб с примерами из книжки Философия JAVA](https://github.com/BruceEckel/TIJ4-code/tree/master)
 - [Тинькофф](https://www.tinkoff.ru/career/it/about/?utm_source=telegram&utm_medium=ntv.fix&utm_campaign=career.it_about.partners&utm_term=progeri&erid=2Vtzqw3ymyg)
+- [ЦК GB](https://geekbrainspro.notion.site/f759f9d0db884b97ba7b3555309c4976)
+- [К GB](https://gb.ru/career)
 - [Яндекс](https://crowd.yandex.ru/back_office/lid_razrab)
 - [Совкомбанк](https://t.me/SovcomStudents)
 - [МТС](https://job.mts.ru/internship)
