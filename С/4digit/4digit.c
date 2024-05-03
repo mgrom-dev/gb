@@ -35,7 +35,7 @@ int main(){
     return 0;
 }
 
-// Количество строк в файле
+// РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РІ С„Р°Р№Р»Рµ
 int count_row(FILE* file) {
     int count = 0;
     char str[STR_LEN];
@@ -45,20 +45,20 @@ int count_row(FILE* file) {
     return count;
 }
 
-// Чтение строк
+// Р§С‚РµРЅРёРµ СЃС‚СЂРѕРє
 void read_rows(FILE* file, char strings[][STR_LEN]) {
     fseek(file, 0, SEEK_SET);
     for (int i = 0; fscanf(file, "%[^\n]%*c", strings[i]) == 1;  i++) ;
     fseek(file, 0, SEEK_SET);
 }
 
-// Вывод строк
+// Р’С‹РІРѕРґ СЃС‚СЂРѕРє
 void print_strings(char strings[][STR_LEN], int count) {
     for (int i = 0; i < count; i++)
         printf("%s %d\n", strings[i], strlen(strings[i]));
 }
 
-// Сортировка строк
+// РЎРѕСЂС‚РёСЂРѕРІРєР° СЃС‚СЂРѕРє
 void sort_rows(char strings[][STR_LEN], int count) {
     for (int i = 0; i < count; i++) {
         for (int j = i + 1; j < count; j++) {
@@ -68,7 +68,7 @@ void sort_rows(char strings[][STR_LEN], int count) {
     }
 }
 
-// Поменять строки между собой местами
+// РџРѕРјРµРЅСЏС‚СЊ СЃС‚СЂРѕРєРё РјРµР¶РґСѓ СЃРѕР±РѕР№ РјРµСЃС‚Р°РјРё
 void swap_rows(char str1[STR_LEN], char str2[STR_LEN]) {
     char tmp[STR_LEN];
     strcopy(str1, tmp);
@@ -76,14 +76,14 @@ void swap_rows(char str1[STR_LEN], char str2[STR_LEN]) {
     strcopy(tmp, str2);
 }
 
-// получить номер из строки
+// РїРѕР»СѓС‡РёС‚СЊ РЅРѕРјРµСЂ РёР· СЃС‚СЂРѕРєРё
 int getNumFromRow(char str1[STR_LEN]) {
     int result;
     if (sscanf((const char*) str1, "%*[^0-9]%d", &result) != 1) result = -1;
     return result;
 }
 
-// Сравнение строк
+// РЎСЂР°РІРЅРµРЅРёРµ СЃС‚СЂРѕРє
 int compare_rows(char str1[STR_LEN], char str2[STR_LEN]) {
     int num1 = getNumFromRow(str1);
     int num2 = getNumFromRow(str2);
@@ -92,14 +92,14 @@ int compare_rows(char str1[STR_LEN], char str2[STR_LEN]) {
     return num1 > num2 ? 1 : (num1 < num2 ? -1 : 0);
 }
 
-// Длина строки
+// Р”Р»РёРЅР° СЃС‚СЂРѕРєРё
 int strlen(char str[STR_LEN]) {
     int length = 0;
     while(str[length++] != '\0') ;
     return --length;
 }
 
-// Запись строк в файл
+// Р—Р°РїРёСЃСЊ СЃС‚СЂРѕРє РІ С„Р°Р№Р»
 void save_rows(FILE* file, char strings[][STR_LEN], int count) {
     freopen(PATH, "w", file);
     for (int i = 0, l = strlen(strings[i]); i < count; i++, l = strlen(strings[i])) {
@@ -109,7 +109,7 @@ void save_rows(FILE* file, char strings[][STR_LEN], int count) {
     freopen(PATH, "r+", file);
 }
 
-// Удаление дубликатов строк
+// РЈРґР°Р»РµРЅРёРµ РґСѓР±Р»РёРєР°С‚РѕРІ СЃС‚СЂРѕРє
 void remove_duplicate_rows(char strings[][STR_LEN], int* count) {
     int index = 0;
     char new_strings[*count][STR_LEN];
@@ -131,7 +131,7 @@ void remove_duplicate_rows(char strings[][STR_LEN], int* count) {
     }
 }
 
-// Копирование строки
+// РљРѕРїРёСЂРѕРІР°РЅРёРµ СЃС‚СЂРѕРєРё
 void strcopy(char resource[STR_LEN], char target[STR_LEN]) {
     int i = 0;
     while((target[i] = resource[i]) != '\0') i++;
