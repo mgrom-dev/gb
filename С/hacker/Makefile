@@ -17,5 +17,11 @@ bubble_sort2: bubble_sort2.c
 var_func: var_func.c
 	$(COMMANDS)
 
+# Sort structures
+struct_enums: struct_enums.c
+	$(GCC) $< -o $@
+	echo "3 7 24 25 5 12 13 3 4 5" | ./$@
+	rm -f $@.exe $@
+
 clean:
 	rm -f *.exe
