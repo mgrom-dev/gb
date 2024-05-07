@@ -17,6 +17,10 @@ bubble_sort2: bubble_sort2.c
 var_func: var_func.c
 	$(COMMANDS)
 
+# Repeat symbols
+mumbling: mumbling.c
+	$(COMMANDS)
+
 # Sort structures
 struct_enums: struct_enums.c
 	$(GCC) $< -o $@
