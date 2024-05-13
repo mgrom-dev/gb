@@ -19,12 +19,15 @@ import lombok.Data;
 @Data
 public class MediaFile {
     private String name;
+    private String ext;
     private long size;
     private long date;
     File file;
 
     MediaFile(File file) {
         name = file.getName();
+        ext =  name.substring(name.lastIndexOf(".") + 1);
+        if (ext.length() > 4) ext = "";
         size = file.length();
         date = file.lastModified();
         this.file = file;
@@ -83,19 +86,21 @@ public class MediaFile {
         String[] partsOfDate = name.split("[-. ]");
         if (partsOfDate.length >= 3) {
             // если компонент даты содержит лишние символы, то это не дата
+            int countParts = 0;
             for (String part : partsOfDate) {
-                if (part.matches(".*\\D.*")) return ;
+                if (part.matches(".*\\D.*")) break ;
+                countParts++;
             }
             int year = Integer.parseInt(partsOfDate[0]),
                 month = Integer.parseInt(partsOfDate[1]) - 1, // месяцы в Java начинаются с 0
                 day = Integer.parseInt(partsOfDate[2]),
-                hour = partsOfDate.length >= 4 ? Integer.parseInt(partsOfDate[3]) : 0,
-                mins = partsOfDate.length >= 5 ? Integer.parseInt(partsOfDate[4]) : 0,
-                secs = partsOfDate.length >= 6 ? Integer.parseInt(partsOfDate[5]) : 0;
+                hour = countParts >= 4 ? Integer.parseInt(partsOfDate[3]) : 0,
+                mins = countParts >= 5 ? Integer.parseInt(partsOfDate[4]) : 0,
+                secs = countParts >= 6 ? Integer.parseInt(partsOfDate[5]) : 0;
             // проверяем границы частей даты
             if (year < 1970 || year > 3000 || month > 11 || day > 31 || hour > 24 || mins > 60 || secs > 60) return ;
-            Calendar calendar = new GregorianCalendar(year, month, day, hour, mins, secs);
-            long dateInMillis = calendar.getTimeInMillis();
+            Calendar dateFromName = new GregorianCalendar(year, month, day, hour, mins, secs);
+            long dateInMillis = dateFromName.getTimeInMillis();
             // последняя проверка что даты не из будущего
             if (dateInMillis < System.currentTimeMillis()) date = dateInMillis;
         }
