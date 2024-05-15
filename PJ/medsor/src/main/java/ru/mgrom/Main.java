@@ -1,5 +1,7 @@
 package ru.mgrom;
 
+import static java.nio.file.LinkOption.NOFOLLOW_LINKS;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -9,7 +11,6 @@ import java.nio.file.Path;
 import java.nio.file.attribute.FileTime;
 import java.text.SimpleDateFormat;
 import java.util.HashSet;
-import static java.nio.file.LinkOption.NOFOLLOW_LINKS;
 
 public class Main {
     public static final String homePath = "H:\\Media";
