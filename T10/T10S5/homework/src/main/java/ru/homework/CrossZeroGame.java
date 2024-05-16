@@ -1,11 +1,18 @@
 package ru.homework;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
 public class CrossZeroGame {
     private static Scanner scan = null;
     private static Random rand = null;
+    /* путь к файлу для сохранения игры */
+    private static final String PATH_SAVES = "save.data";
     /* символы клеток игрока и компьютера */
     private static final char PL = 'X';
     private static final char PC = 'O';
@@ -59,14 +66,14 @@ public class CrossZeroGame {
         while (cell == -1) {
             /* если данные в консоли не являются числом, то возможно это функции игры */
             if (!scan.hasNextInt()) {
-                String line = scan.nextLine();
+                String line = scan.nextLine().toLowerCase();
                 if (line.equals("q") || line.equals("quit")) { // выход из игры
                     gameover = true;
                     return;
                 } else if (line.equals("s") || line.equals("save")) { // сохранить игру
-                    System.out.println("save game");
+                    saveGame();
                 } else if (line.equals("l") || line.equals("load")) { // загрузить игру
-                    System.out.println("load game");
+                    loadGame();
                 }
                 continue;
             }
@@ -128,8 +135,13 @@ public class CrossZeroGame {
             private String cell;
 
             Cell(char ch) {
-                ANSI color = ch == PL ? ANSI.GREEN : (ch == PC ? ANSI.YELLOW : ANSI.WHITE);
-                cell = String.format("%s %c \u001B[0m", color, ch);
+                /* проверяем поддержку ansi-escape последовательностей */
+                if (System.console() != null && System.getenv().get("TERM") != null) {
+                    ANSI color = ch == PL ? ANSI.GREEN : (ch == PC ? ANSI.YELLOW : ANSI.WHITE);
+                    cell = String.format("%s %c \u001B[0m", color, ch);
+                } else {
+                    cell = String.format(" %c ", ch);
+                }
             }
 
             @Override
@@ -139,14 +151,82 @@ public class CrossZeroGame {
         }
 
         /* очистка консоли */
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        if (System.console() != null && System.getenv().get("TERM") != null) {
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+        } else {
+            try {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } catch (InterruptedException | IOException e) {
+                e.printStackTrace();
+            }
+        }
 
         /* отрисовка поля */
+        System.out.println("Commands: Quit, Save or Load");
         for (int i = 0; i < 3; i++) {
             if (i > 0)
                 System.out.printf("---+---+---\n");
             System.out.printf("%s|%s|%s\n", new Cell(board[i][0]), new Cell(board[i][1]), new Cell(board[i][2]));
         }
+    }
+
+    /** сохранение игры */
+    private void saveGame() {
+        /* записываем данные в строку в двоичном виде */
+        byte[] bytes = new byte[3];
+        StringBuilder sb = new StringBuilder();
+        for (char[] row : board)
+            for (char ch : row)
+                sb.append(ch == PL ? "10" : (ch == PC ? "01" : "00"));
+
+        /* переводим данные из строки в байты */
+        for (int i = 0, j = 0, len = sb.length(); i < len; i += 8, j++) {
+            if (i + 8 < len) {
+                bytes[j] = (byte) Integer.parseInt(sb.substring(i, i + 8), 2);
+            } else {
+                bytes[j] = (byte) Integer.parseInt(sb.substring(i, len), 2);
+            }
+        }
+
+        /* записываем данные в файл */
+        try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(PATH_SAVES))) {
+            dos.write(bytes);
+            System.out.println("game saved...");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /** загрузка игры */
+    private void loadGame() {
+        /* считываем данные из файла */
+        byte[] bytes = new byte[3];
+        try (DataInputStream dis = new DataInputStream(new FileInputStream(PATH_SAVES))) {
+            bytes = dis.readAllBytes();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        /* переводим данные в строку в двоичном виде */
+        StringBuilder sb = new StringBuilder();
+        for (byte b : bytes) 
+            sb.append(String.format("%08d", Integer.parseInt(Integer.toBinaryString(Byte.toUnsignedInt(b)))));
+
+        /* сбрасываем поле в начальную позицию */
+        char c = '0';
+        for (char[] row : board)
+            for (byte i = 0; i < row.length; i++)
+                row[i] = ++c;
+
+        /* загружаем данные */
+        for (int i = 0, j = 0, len = sb.length(); i < len && j < 9; i += 2, j++) {
+            String value = sb.substring(i, i + 2);
+            if (value.equals("10")) board[j / 3][j % 3] = PL;
+            else if (value.equals("01")) board[j / 3][j % 3] = PC;
+        }
+
+        printBoard();
+        System.out.println("game loaded...");
     }
 }
