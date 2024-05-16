@@ -1,11 +1,13 @@
 package ru.homework;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class Main {
     public static void main(String[] args) {
-        backupFolder(".\\");
+        backupFolder(File.separator);
         CrossZeroGame game = new CrossZeroGame();
         game.startGame();
     }
@@ -16,14 +18,20 @@ public class Main {
      */
     private static void backupFolder(String path) {
         /* создаем новую директорию, если она еще не создана */
-        File backupDir = new File("./backup");
+        File backupDir = new File(File.separator + "backup");
         if (!backupDir.exists() || !backupDir.isDirectory()) {
             backupDir.mkdir();
         }
-        File[] files = backupDir.listFiles();
+
+        File[] files = new File(path).listFiles();
+        System.out.println(files.length);
         for (File file : files)
             if (file.isFile()) {
-                Files.
+                try {
+                    Files.copy(Path.of(file.getPath()), Path.of(backupDir.getPath() + File.separator + file.getName()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
     }
 }
