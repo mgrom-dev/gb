@@ -143,11 +143,80 @@
 <details><summary><b>T8 - Контейниризация, linux, docker, kubernetes</b></summary><blockquote>
     <details><summary><U>Лекции</u></summary><blockquote>
         <li><a href="https://github.com/mgrom-dev/gb/tree/main/T8/T8L1">[T8L1]</a> - Урок 1. Механизм пространства имён</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T8/T8L2">[T8L2]</a> - Урок 2. Механизмы контрольных групп</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T8/T8L3">[T8L3]</a> - Урок 3. Введение в Docker</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T8/T8L4">[T8L4]</a> - Урок 4. Dockerfile и слои</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T8/T8L5">[T8L5]</a> - Урок 5. Docker Compose и Docker Swarm</li>
     </blockquote></details>
     <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T8/T8S1">[T8S1]</a> - Урок 1. Механизм пространства имён</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T8/T8S2">[T8S2]</a> - Урок 2. Механизмы контрольных групп</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T8/T8S3">[T8S3]</a> - Урок 3. Введение в Docker</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T8/T8S4">[T8S4]</a> - Урок 4. Dockerfile и слои</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T8/T8S5">[T8S5]</a> - Урок 5. Docker Compose и Docker Swarm</li>
     </blockquote>
     </details>
-    <i>Контейниризация, linux, docker, kubernetes</i>
+    <i>Механизмы пространства имен и контрольных групп, контейниризация, linux, docker, docker compose, docker swarm</i>
+</blockquote></details>
+
+<details><summary><b>T9 - Агоритмы и структуры данных</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T9/T9L1">[T9L1]</a> - Урок 1. Алгоритмы. Сложность алгоритмов</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T9/T9L2">[T9L2]</a> - Урок 2. Структуры данных. Массивы. Алгоритмы массивов</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T9/T9L3">[T9L3]</a> - Урок 3. Структуры данных. Связный список</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T9/T9L4">[T9L4]</a> - Урок 4. Структуры данных дерево и хэш-таблица</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T9/T9S1">[T9S1]</a> - Урок 1. Алгоритмы. Сложность алгоритмов</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T9/T9S2">[T9S2]</a> - Урок 2. Структуры данных. Массивы. Алгоритмы массивов.</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T9/T9S3">[T9S3]</a> - Урок 3. Структуры данных. Связный список.</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T9/T9S4">[T9S4]</a> - Урок 4. Структуры данных дерево и хэш-таблица</li>
+    </blockquote>
+    </details>
+    <i>Изучение различных подходов к решению задач, поиск оптимальных алгоритмов, замеры производительности и использования ресурсов программой</i>
+</blockquote></details>
+
+<details><summary><b>T10 - Java Core</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T10/T10L1">[T10L1]</a> - Урок 1. Платформа: история и окружение</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T10/T10L2">[T10L2]</a> - Урок 2. Специализация: данные и функции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T10/T10L3">[T10L3]</a> - Урок 3. Специализация: ООП</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T10/T10L4">[T10L4]</a> - Урок 4. Специализация: ООП и исключения</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T10/T10L5">[T10L5]</a> - Урок 5. Специализация: тонкости работы</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T10/T10S1">[T10S1]</a> - Урок 1. Компиляция и интерпретация кода</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T10/T10S2">[T10S2]</a> - Урок 2. Данные и функции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T10/T10S3">[T10S3]</a> - Урок 3. Классы и объекты</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T10/T10S4">[T10S4]</a> - Урок 4. Обработка исключений</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T10/T10S5">[T10S5]</a> - Урок 5. Специализация: тонкости работы</li>
+    </blockquote>
+    </details>
+    <i>JDK, JRE, JVM, GC, exceptions, streams, типы данных, javadoc, Maven, JUnit, Lombok, Docker, файловый системы, игра крестики-нолики</i>
+    <li><a href="https://habr.com/ru/articles/345520/">Шпаргалка Lombok</a></li>
+    <li><a href="https://mvnrepository.com/">mvnrepository репозиторий</a></li>
+    <li><a href="https://mvnrepository.com/artifact/org.projectlombok/lombok">Lobok maven</a></li>
+</blockquote></details>
+
+<details><summary><b>T11 - Java Development Kit</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T11/T11L1">[T11L1]</a> - Урок 1. Графический интерфейс пользователя</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T11/T11L2">[T11L2]</a> - Урок 2. Интерфейсы</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T11/T11L3">[T11L3]</a> - Урок 3. Обобщенное программирование</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T11/T11L4">[T11L4]</a> - Урок 4. ООП и исключения Многопоточность</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T11/T11L5">[T11L5]</a> - Урок 5. Коллекции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T11/T11L6">[T11L6]</a> - Урок 6. Управление проектом: сборщики проектов</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T11/T11S1">[T11S1]</a> - Урок 1. Простейшие интерфейсы пользователя</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T11/T11S2">[T11S2]</a> - Урок 2. Интерфейсы и API</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T11/T11S3">[T11S3]</a> - Урок 3. Универсальное проектирование</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T11/T11S4">[T11S4]</a> - Урок 4. Паралеллизм и асинхронность</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T11/T11S5">[T11S5]</a> - Урок 5. Структурирование данных</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T11/T11S6">[T11S6]</a> - Урок 6. Сборка проекта</li>
+    </blockquote>
+    </details>
+    <i>Многопоточность</i>
 </blockquote></details>
 
 ----------
@@ -171,7 +240,7 @@
     <a href="https://drive.google.com/file/d/1A3Z_Z-zawc2LQcgAGdBdvAqxYTrszxnu/view?usp=sharing">"Алгоритмы построение и анализ" (Томас Кормен) [2011 год]</a><br>
     </blockquote></details>
 
-    <details><summary><b>Ссылки</b></summary><blockquote>
+-   <details><summary><b>Ссылки</b></summary><blockquote>
     <a href="https://git.io/ac-wiki/">рунет</a> - обход блокировок<br>
     <a href="https://roadmap.sh/">roadmap</a> - карта скиллов<br>
     <a href="https://app.diagrams.net/">Diagrams</a> - создание блок-схем<br>
@@ -188,4 +257,5 @@
     &emsp;<a href="https://klavogonki.ru/">Klavogonki</a> - в виде игры<br>
     &emsp;<a href="https://typing.io/">Typing</a> - для программистов<br>
     &emsp;<a href="https://edu.neoflex.ru/devops/">edu.neoflex</a> - Бесплатный курс DevOps<br>
+    &emsp;<a href="https://leetcode.com/">leetcode</a> - cайт с различными задачами с собеседований и автотестами<br>
     </blockquote></details>
