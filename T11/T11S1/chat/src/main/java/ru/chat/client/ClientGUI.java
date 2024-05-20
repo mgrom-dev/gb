@@ -2,12 +2,17 @@ package ru.chat.client;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -21,8 +26,14 @@ public class ClientGUI extends JFrame {
     private static final int HEIGHT = 300;
     private static final String TITLE = "Chat client";
 
-    private JPanel authPanel;
+    private ServerWindow parent; // родительское окно
+    private JPanel authPanel; // форма авторизации
     private JTextArea messageArea;
+    private JTextField ipField;
+    private JTextField portField;
+    private JTextField loginField;
+    private JTextField passField;
+    private JTextField messageField;
 
     public ClientGUI(ServerWindow parent) {
         /* настройки окна */
@@ -31,81 +42,94 @@ public class ClientGUI extends JFrame {
         setResizable(false);
         Container contentPane = getContentPane();
         contentPane.setLayout(new BorderLayout());
+        JPanel topPanel = new JPanel(new BorderLayout());
+        topPanel.add(new JPanel(){{setPreferredSize(new Dimension(0, 3));}}, BorderLayout.NORTH);
+        contentPane.add(topPanel, BorderLayout.NORTH);
+        this.parent = parent;
 
+        /* форма авторизации */
         authPanel = new JPanel(new GridLayout(2, 3));
-        authPanel.add(addTextField("IP:", "127.0.0.1"));
-        authPanel.add(addTextField("Port:", "8189"));
+        ipField = new JTextField();
+        portField = new JTextField();
+        loginField = new JTextField();
+        passField = new JPasswordField();
+        authPanel.add(addField("IP:", "127.0.0.1", ipField));
+        authPanel.add(addField("Port:", "8189", portField));
         authPanel.add(new JLabel(""));
-        authPanel.add(addTextField("Login:", "Login..."));
-        authPanel.add(addTextField("Password:", ""));
-        authPanel.add(new JButton("Login"));
-
-        // // Панель авторизации
-        // authPanel = new JPanel(new GridLayout(2, 1, 0, -5));
-
-        // // Строка с IP и портом
-        // JPanel ipPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        // JTextField ipField = new JTextField("127.0.0.1", 10);
-        // JTextField portField = new JTextField("8189", 4);
-        // ipPanel.add(new JLabel("IP:"));
-        // ipPanel.add(ipField);
-        // ipPanel.add(new JLabel("Port:"));
-        // ipPanel.add(portField);
-        // authPanel.add(ipPanel);
-
-        // // Строка с логином, паролем и кнопкой
-        // JPanel loginPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        // JTextField loginField = new JTextField("Login...", 8);
-        // JPasswordField passwordField = new JPasswordField(8);
-        // JButton loginButton = new JButton("Login");
-        // loginPanel.add(new JLabel("Login:"));
-        // loginPanel.add(loginField);
-        // loginPanel.add(new JLabel("Password:"));
-        // loginPanel.add(passwordField);
-        // loginPanel.add(loginButton);
-        // authPanel.add(loginPanel);
+        authPanel.add(addField("Login:", "Login...", loginField));
+        authPanel.add(addField("Pass:", "", passField));
+        JButton loginButton = new JButton("login");
+        loginButton.addActionListener(this::loginConfirm);
+        authPanel.add(loginButton);
+        topPanel.add(authPanel, BorderLayout.SOUTH);
 
         // Область сообщений
         messageArea = new JTextArea();
         messageArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(messageArea);
+        contentPane.add(scrollPane, BorderLayout.CENTER);
 
         // Панель ввода сообщения
         JPanel inputPanel = new JPanel(new BorderLayout());
-        JTextField messageField = new JTextField();
-        JButton sendButton = new JButton("Send");
+        JButton sendButton = new JButton("send");
+        sendButton.addActionListener(this::sendMessage);
+        messageField = new JTextField();
+        messageField.addKeyListener(new KeyListener() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    sendButton.doClick();
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent arg0) {}
+
+            @Override
+            public void keyTyped(KeyEvent arg0) { }
+        });
         inputPanel.add(messageField, BorderLayout.CENTER);
         inputPanel.add(sendButton, BorderLayout.EAST);
-
-        // Компоновка элементов на форме
-        getContentPane().setLayout(new BorderLayout());
-        getContentPane().add(authPanel, BorderLayout.NORTH);
-        getContentPane().add(scrollPane, BorderLayout.CENTER);
-        getContentPane().add(inputPanel, BorderLayout.SOUTH);
+        contentPane.add(inputPanel, BorderLayout.SOUTH);
 
         setVisible(true);
-
         parent.addChildren(this);
     }
 
-    /**
-     * Добавление текстового поля с представлением
-     * 
-     * @param caption - краткое описание текстового поля
-     * @param text    - текст внутри поля
-     * @return
-     */
-    private JPanel addTextField(String caption, String text) {
+    /** Добавление текстового поля с подписью */
+    private JPanel addField(String label, String text, JTextField textField) {
         JPanel panel = new JPanel(new BorderLayout());
-        JLabel label = new JLabel(caption);
-        label.setBorder(new EmptyBorder(0, 5, 0, 5));
-        panel.add(label, BorderLayout.WEST);
-        panel.add(new JTextField(text), BorderLayout.CENTER);
+        JLabel caption = new JLabel(label);
+        caption.setBorder(new EmptyBorder(0, 5, 0, 5));
+        panel.add(caption, BorderLayout.WEST);
+        textField.setText(text);
+        panel.add(textField, BorderLayout.CENTER);
         return panel;
     }
 
     /** видимость панели авторизации */
     public void authPanelVisible(boolean visible) {
         authPanel.setVisible(visible);
+    }
+
+    /** получить область сообщений */
+    public JTextArea getMessageArea() {
+        return messageArea;
+    }
+
+    /** получить логин с формы */
+    public String getLogin() {
+        return loginField.getText();
+    }
+
+    /** авторизация пользователя */
+    private void loginConfirm(ActionEvent e) {
+        parent.loginUser(ipField.getText(), portField.getText(), loginField.getText(), passField.getText(), messageArea);
+    }
+
+    /** отправка сообщения */
+    private void sendMessage(ActionEvent e) {
+        parent.sendMessage(loginField.getText(), messageField.getText(), messageArea);
+        messageField.setText("");
     }
 }
