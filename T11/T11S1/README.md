@@ -6,3 +6,9 @@
 4. Написание графической оболочки для настроек игры в крестики-нолики.
 
 [Java Swing: знакомство](https://progoschool.ru/java/java-swing/)
+
+
+### Полезная информация
+- Qt - дизайн интерфейса
+- [Иконки](https://icons8.ru/)
+- [Base64 to img](https://base64.guru/converter/encode/image)
