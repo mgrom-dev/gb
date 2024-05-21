@@ -241,6 +241,9 @@
     </blockquote></details>
 
 -   <details><summary><b>Ссылки</b></summary><blockquote>
+    <a href="https://chromewebstore.google.com/detail/copyfish-%F0%9F%90%9F-free-ocr-soft/eenjdnjldapjajjofmldgmkjaienebbj">copyfish</a> - расширение chrome для получения текста из картинок<br>
+    <a href="https://chromewebstore.google.com/detail/3c-capture-crop-create/mjcdmlibiooblijamnolhajjigcmhglp">3c-capture-crop-create</a> - расширение chrome для вырезания картинок<br>
+    <a href="https://www.iloveimg.com/ru/compress-image">iloveimg</a> - сжатие картинок<br>
     <a href="https://git.io/ac-wiki/">рунет</a> - обход блокировок<br>
     <a href="https://websiteproxy.net/">веб-прокси</a> - обход блокировок<br>
     <a href="https://roadmap.sh/">roadmap</a> - карта скиллов<br>

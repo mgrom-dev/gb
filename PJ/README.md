@@ -9,6 +9,7 @@
 - (chapter6) Глава 6. Управление доступом (стр. 187)
 
 ### Ссылки:
+- [CS50 на русском](https://www.youtube.com/playlist?list=PLawfWYMUziZqyUL5QDLVbe3j5BKWj42E5) - Гарвардский курс по программированию
 - [Сборщик ant](https://ant.apache.org/) - работает на .xml файлах, команда ant
 - [Книги и учебные материалы по Java, Kotlin, Scala, C, C++ (МindView)](https://www.mindviewllc.com/)
 - [Загрузка JAVA SDK (Javasun)](https://www.oracle.com/java/technologies/downloads/)
