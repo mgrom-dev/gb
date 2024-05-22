@@ -20,6 +20,7 @@ import javax.swing.border.EmptyBorder;
 
 import ru.chat.server.ServerWindow;
 
+@Deprecated
 public class ClientGUI extends JFrame {
     /* настройки окна */
     private static final int WIDTH = 400;
