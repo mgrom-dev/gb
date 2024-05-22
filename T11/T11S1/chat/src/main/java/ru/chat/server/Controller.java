@@ -4,8 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
-import ru.chat.client.GUI;
-
 /**
  * Класс содержащий логику работы сервера
  * 
@@ -31,21 +29,23 @@ public class Controller {
     /** Запуск сервера */
     public void startServer() {
         isServerRunned = true;
-        clients.getClientsView().forEach(client -> client.showMessage(repository.read()));
+        ui.showMessage(repository.read());
     }
 
     /** Остановка сервера */
     public void stopServer() {
         isServerRunned = false;
         clients.getClientsView().forEach(client -> client.disconnectedFromServer());
+        clients.clear();
     }
 
     /** Отправка сообщения на сервер */
     public boolean sendMessage(String text, String token) {
-        if (!clients.clientByTokenExist(token) || !isServerRunned) return false;
+        if (!clients.clientByTokenExist(token) || !isServerRunned || text.isEmpty())
+            return false;
 
         String login = clients.getLoginByToken(token);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
         String currentTime = dateFormat.format(new Date());
         String message = String.format("[%s] %s: %s\n", currentTime, login, text);
 
@@ -63,15 +63,17 @@ public class Controller {
             /* генерация уникального токена для клиента */
             do {
                 token = "" + random.nextInt(Integer.MAX_VALUE);
-            } while(clients.clientByTokenExist(token));
+            } while (clients.clientByTokenExist(token));
 
             clients.add(ip, port, login, password, token, view);
+            view.showMessage(repository.read());
+            ui.showMessage(login + " подключился к беседе\n");
         }
         return token;
     }
 
     /** Добавление клиентского окна */
     public void addClientWindow() {
-        new GUI();
+        new ru.chat.client.Controller(this);
     }
 }

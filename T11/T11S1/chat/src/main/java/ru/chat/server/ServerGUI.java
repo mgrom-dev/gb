@@ -77,8 +77,9 @@ public class ServerGUI extends JFrame implements View {
         setIcon(SERVER_STARTED_ICO);
         stopButton.setEnabled(true);
         startButton.setEnabled(false);
-        messageArea.setText("Сервер запущен!\n");
+        messageArea.setText("");
         controller.startServer();
+        messageArea.append("Сервер запущен!\n");
     }
     
     /** установить иконку для окна */
