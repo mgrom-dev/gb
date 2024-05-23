@@ -237,6 +237,7 @@
     <a href="https://drive.google.com/file/d/12W-JPaIQmbs5E8LzBaHHsaKAURB1cBXJ/view?usp=sharing">"Системы баз данных" (Гектор Гарсиа-Молина, Джеффри Ульман, Дженнифер Уидом) [2003 год]</a><br>
     <a href="https://drive.google.com/file/d/12Il9N7AYOFEOcLSNCcwk6CRzcEXG3bfZ/view?usp=sharing">"Секреты Oracle SQL" (Санжей Мишра, Алан Бьюли) [2003 год]</a><br>
     <a href="https://drive.google.com/file/d/1mQzuKSg5fvzxFiRR5-Eg1zKa-tWZauaw/view?usp=sharing">"Философия JAVA" (Брюс Эккель) [2015 год]</a><br>
+    <a href="https://drive.google.com/file/d/1qV4s6uWONrDkkunpQLyc1TpxktlfMnoz/view?usp=sharing">"Java полное руководство" (Герберт Шилдт) [2022 год]</a><br>
     <a href="https://drive.google.com/file/d/1A3Z_Z-zawc2LQcgAGdBdvAqxYTrszxnu/view?usp=sharing">"Алгоритмы построение и анализ" (Томас Кормен) [2011 год]</a><br>
     </blockquote></details>
 
@@ -254,6 +255,8 @@
     <a href="https://dotnetfiddle.net/#">dotnetfiddle</a> - онлайн компилятор c#<br>
     <a href="https://migeel.sk/blog/2024/01/02/building-a-self-contained-game-in-csharp-under-2-kilobytes/">статья C#</a> - Создание автономной игры на C# размером менее 2 килобайт.<br>
     <a href="https://metanit.com/">сайт по программированию</a> - справочные материалы для программистов по: asm, c#, c, c++, java, web, python, sql, mongoDB, go, vb.net, swift, kotlin, dart, php, rust, f#<br>
+    <a href="https://leetcode.com/">leetcode</a> - cайт с различными задачами с собеседований и автотестами<br>
+    <a href="https://edabit.com/challenges">edabit</a> - cайт с интерактивными задачами C#, C++, Java, JS, PHP, Ruby, Python, Swift<br>
     <u><b>Онлайн тренажеры метода слепой печати:</b></u><br>
     &emsp;<a href="https://typerun.top/#rus_basic">TypeRun</a><br>
     &emsp;<a href="https://www.typingstudy.com/">TypingStudy</a><br>
@@ -261,5 +264,4 @@
     &emsp;<a href="https://klavogonki.ru/">Klavogonki</a> - в виде игры<br>
     &emsp;<a href="https://typing.io/">Typing</a> - для программистов<br>
     &emsp;<a href="https://edu.neoflex.ru/devops/">edu.neoflex</a> - Бесплатный курс DevOps<br>
-    &emsp;<a href="https://leetcode.com/">leetcode</a> - cайт с различными задачами с собеседований и автотестами<br>
     </blockquote></details>
