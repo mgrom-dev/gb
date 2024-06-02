@@ -239,6 +239,8 @@
     <a href="https://drive.google.com/file/d/1mQzuKSg5fvzxFiRR5-Eg1zKa-tWZauaw/view?usp=sharing">"Философия JAVA" (Брюс Эккель) [2015 год]</a><br>
     <a href="https://drive.google.com/file/d/1qV4s6uWONrDkkunpQLyc1TpxktlfMnoz/view?usp=sharing">"Java полное руководство" (Герберт Шилдт) [2022 год]</a><br>
     <a href="https://drive.google.com/file/d/1A3Z_Z-zawc2LQcgAGdBdvAqxYTrszxnu/view?usp=sharing">"Алгоритмы построение и анализ" (Томас Кормен) [2011 год]</a><br>
+    <a href="https://drive.google.com/file/d/1EUm6WhTNJynbwFhfhRHNgq-h-i5qUdPN/view?usp=sharing">"ПАТТЕРНЫ ОБЪЕКТНО-ОРИЕНТИРОВАННОГО ПРОЕКТИРОВАНИЯ (Э. Гамма, Р. Хелм, Р. Джонсон, Дж. Влиссидес) [2020 год]</a><br>
+    <a href="https://drive.google.com/file/d/1ET1dE8N_BPyWkxn9dAAC4c2SkvN-LqpX/view?usp=sharing">"Java ЭФФЕКТИВНОЕ ПРОГРАММИРОВАНИЕ" (Джошуа Блох) [2019 год]</a><br>
     </blockquote></details>
 
 -   <details><summary><b>Ссылки</b></summary><blockquote>
