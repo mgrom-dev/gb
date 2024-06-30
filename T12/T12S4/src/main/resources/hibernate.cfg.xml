@@ -7,13 +7,18 @@
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">pass</property>
-        <property name="show_sql">true</property>
 
         <!-- none, create, create-drop, update, validate-->
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
 
-        <mapping class="ru.gb.lesson4.entity.Author"/>
-        <mapping class="ru.gb.lesson4.entity.Book"/>
-        <mapping class="ru.gb.lesson4.entity.AuthorBook"/>
+        <!-- Log settings -->
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.generate_statistics">false</property>
+        <property name="hibernate.use_sql_comments">false</property>
+        <property name="hibernate.format_sql">false</property>
+
+        <mapping class="ru.gb.lesson4.hw.Post"/>
+        <mapping class="ru.gb.lesson4.hw.PostComment"/>
+        <mapping class="ru.gb.lesson4.hw.User"/>
     </session-factory>
 </hibernate-configuration>
