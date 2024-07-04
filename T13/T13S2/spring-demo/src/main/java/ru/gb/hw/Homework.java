@@ -25,4 +25,77 @@ public class Homework {
    * 3.3 ...
    */
 
+  @Configuration
+  public class TicketNumberGenerator {
+    private static final TicketNumberGenerator instance = new TicketNumberGenerator();
+
+    private TicketNumberGenerator() {
+    }
+
+    public static TicketNumberGenerator getInstance() {
+        return instance;
+    }
+
+    public String createNewNumber() {
+        return "Ticket #" + UUID.randomUUID().toString();
+    }
+  }
+
+  public class Ticket {
+    private String number;
+    private LocalDateTime createdAt;
+    private String customerName;
+    private String customerPhone;
+
+    public Ticket(String number, LocalDateTime createdAt, String customerName, String customerPhone) {
+        this.number = number;
+        this.createdAt = createdAt;
+        this.customerName = customerName;
+        this.customerPhone = customerPhone;
+    }
+
+    // Getters and setters
+  }
+
+  @Service
+  public class TicketBoard {
+    private final TicketNumberGenerator ticketNumberGenerator;
+    private final List<Ticket> tickets = new ArrayList<>();
+
+    public TicketBoard(TicketNumberGenerator ticketNumberGenerator) {
+        this.ticketNumberGenerator = ticketNumberGenerator;
+    }
+
+    public Ticket newTicket(String customerName, String customerPhone) {
+        String number = ticketNumberGenerator.createNewNumber();
+        LocalDateTime createdAt = LocalDateTime.now();
+        Ticket ticket = new Ticket(number, createdAt, customerName, customerPhone);
+        tickets.add(ticket);
+        return ticket;
+    }
+
+    public List<Ticket> getTickets() {
+        return new ArrayList<>(tickets);
+    }
+  }
+
+  @RestController
+  public class TicketController {
+    private final TicketBoard ticketBoard;
+
+    public TicketController(TicketBoard ticketBoard) {
+        this.ticketBoard = ticketBoard;
+    }
+
+    @PostMapping("/tickets")
+    public Ticket createTicket(@RequestParam String customerName, @RequestParam String customerPhone) {
+        return ticketBoard.newTicket(customerName, customerPhone);
+    }
+
+    @GetMapping("/tickets")
+    public List<Ticket> getTickets() {
+        return ticketBoard.getTickets();
+    }
+  }  
+
 }
