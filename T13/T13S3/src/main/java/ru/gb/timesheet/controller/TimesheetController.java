@@ -1,12 +1,13 @@
 package ru.gb.timesheet.controller;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.gb.timesheet.model.Timesheet;
 import ru.gb.timesheet.service.TimesheetService;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,9 +21,12 @@ public class TimesheetController {
   // PATCH - изменение
   // DELETE - удаление
 
-  // @GetMapping("/timesheets/{id}") // получить конкретную запись по идентификатору
-  // @DeleteMapping("/timesheets/{id}") // удалить конкретную запись по идентификатору
-  // @PutMapping("/timesheets/{id}") // обновить конкретную запись по идентификатору
+  // @GetMapping("/timesheets/{id}") // получить конкретную запись по
+  // идентификатору
+  // @DeleteMapping("/timesheets/{id}") // удалить конкретную запись по
+  // идентификатору
+  // @PutMapping("/timesheets/{id}") // обновить конкретную запись по
+  // идентификатору
 
   private final TimesheetService service;
 
@@ -36,7 +40,7 @@ public class TimesheetController {
     Optional<Timesheet> ts = service.getById(id);
 
     if (ts.isPresent()) {
-//      return ResponseEntity.ok().body(ts.get());
+      // return ResponseEntity.ok().body(ts.get());
       return ResponseEntity.status(HttpStatus.OK).body(ts.get());
     }
 
@@ -50,10 +54,14 @@ public class TimesheetController {
 
   @PostMapping // создание нового ресурса
   public ResponseEntity<Timesheet> create(@RequestBody Timesheet timesheet) {
-    timesheet = service.create(timesheet);
-
-    // 201 Created
-    return ResponseEntity.status(HttpStatus.CREATED).body(timesheet);
+    Optional<Timesheet> ts = service.create(timesheet);
+    if (ts.isPresent()) {
+      // 201 Created
+      return ResponseEntity.status(HttpStatus.CREATED).body(timesheet);
+    } else {
+      // 409 Conflict
+      return ResponseEntity.status(HttpStatus.CONFLICT).build();
+    }
   }
 
   @DeleteMapping("/{id}")
@@ -62,6 +70,20 @@ public class TimesheetController {
 
     // 204 No Content
     return ResponseEntity.noContent().build();
+  }
+
+  @GetMapping("/createdAtAfter")
+  public ResponseEntity<List<Timesheet>> getTimesheetsCreatedAfter(
+      @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate createdAtAfter) {
+    List<Timesheet> timesheets = service.findByCreatedAtAfter(createdAtAfter);
+    return ResponseEntity.ok(timesheets);
+  }
+
+  @GetMapping("/createdAtBefore")
+  public ResponseEntity<List<Timesheet>> getTimesheetsCreatedBefore(
+      @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate createdAtBefore) {
+    List<Timesheet> timesheets = service.findByCreatedAtBefore(createdAtBefore);
+    return ResponseEntity.ok(timesheets);
   }
 
 }
