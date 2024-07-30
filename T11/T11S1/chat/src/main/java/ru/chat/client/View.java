@@ -1,7 +1,6 @@
 package ru.chat.client;
 
 /**
- * Интерфейс описывающий абстракцию GUI клиента
  */
 public interface View {
     /**
