@@ -4,7 +4,7 @@
 
 **Spring Test Context Framework** — инфраструктура Spring для тестирования Spring-компонентов с JUnit или TestNG.
 
-**@SpringBootTest** — аннотация, используемая для указания, что тестовый класс является тестом Spring Boot. Это помогает в автоматической настройке Spring Application Context.
+**@SpringBootTest** — аннотация, используемая для указания, что тестовый класс является тестом Spring Boot. Это помогает в автоматической нFастройке Spring Application Context.
 
 **JUnit** — это библиотека Java для юнит-тестирования.
 
