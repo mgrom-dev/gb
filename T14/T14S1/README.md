@@ -176,3 +176,64 @@ SELECT count(*) FROM Orders
 where orderdate BETWEEN @start
 AND @finish
 ```
+
+### Customers
+
+```sql
+-- Определите, сколько уникальных стран представлено среди клиентов.
+SELECT COUNT(DISTINCT Country) AS count_countries
+FROM Customers;
+
+-- Определите количество клиентов, которые проживают в Бразилии
+SELECT COUNT(*) as from_Brazil
+FROM Customers
+WHERE country = 'Brazil';
+```
+
+### Products
+
+```sql
+-- Посчитайте среднюю цену и общее количество товаров в категории с идентификатором 5.
+SELECT 
+AVG(Price) AS average_price,
+COUNT(*) as count_products
+FROM Products
+WHERE categoryid = 5;
+```
+
+### Employees
+
+```sql
+-- Вычислите средний возраст сотрудников на дату 2024-01-01.
+SELECT AVG(age) AS AverageAge
+FROM (
+    SELECT 
+        (julianday('2024-01-01') - julianday(BirthDate)) / 365.25 AS age
+    FROM Employees
+);
+```
+
+### Oders
+
+```sql
+-- Найдите заказы, сделанные в период с 16 января по 15 февраля 2024 года, и отсортируйте их по дате заказа.
+SELECT *
+FROM Orders
+WHERE OrderDate BETWEEN '2024-01-16' AND '2024-02-15'
+ORDER BY OrderDate;
+
+-- Определите количество заказов, сделанных в ноябре 2023 года, используя начальную и конечную дату месяца.
+SELECT COUNT(*) as count_orders_nov_2023
+FROM Orders
+WHERE OrderDate >= '2023-11-01' AND OrderDate <= '2023-11-30';
+
+-- Найдите количество заказов за январь 2024 года, используя оператор LIKE для фильтрации даты.
+SELECT COUNT(*) as count_orders_jan_2023
+FROm Orders
+WHERE OrderDate LIKE '2024-01%';
+
+-- Определите количество заказов за 2024 года, используя функцию STRFTIME для извлечения года.
+SELECT COUNT(*) AS order_count
+FROM Orders
+WHERE strftime('%Y', OrderDate) = '2024';
+```
