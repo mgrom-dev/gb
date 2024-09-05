@@ -219,6 +219,78 @@
     <i>Многопоточность</i>
 </blockquote></details>
 
+<details><summary><b>T12 - Java Junior</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T12/T12L1">[T12L1]</a> - Урок 1. Лямбды и Stream API</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T12/T12L2">[T12L2]</a> - Урок 2. Reflection API</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T12/T12L3">[T12L3]</a> - Урок 3. Сериализация</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T12/T12L4">[T12L4]</a> - Урок 4. Базы данных и инструменты взаимодействия с ними</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T12/T12L5">[T12L5]</a> - Урок 5. Клиент/Сервер своими руками</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T12/T12S1">[T12S1]</a> - Урок 1. Лямбды и Stream API</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T12/T12S2">[T12S2]</a> - Урок 2. Reflection API</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T12/T12S3">[T12S3]</a> - Урок 3. Сериализация</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T12/T12S4">[T12S4]</a> - Урок 4. Базы данных и инструменты взаимодействия с ними</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T12/T12S5">[T12S5]</a> - Урок 5. Клиент/Сервер своими руками</li>
+    </blockquote>
+    </details>
+    <i>Maven, Gradle, паттерн MVC</i>
+</blockquote></details>
+
+<details><summary><b>T13 - Фреймворк Spring</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13L1">[T13L1]</a> - Урок 1. Системы сборки Maven и Gradle для разработки Java приложений</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13L2">[T13L2]</a> - Урок 2. Основы Spring. Spring Boot</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13L3">[T13L3]</a> - Урок 3. Использование Spring для разработки серверного приложения</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13L4">[T13L4]</a> - Урок 4. Spring MVC. Использование шаблонизатора Thymeleaf</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13L5">[T13L5]</a> - Урок 5. Spring Data для работы с базами данных</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13L6">[T13L6]</a> - Урок 6. Проектирование и реализация API для серверного приложения</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13L7">[T13L7]</a> - Урок 7. Spring Security. Работа с JWT. Защита от основных видов атак</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13L8">[T13L8]</a> - Урок 8. Spring AOP, управление транзакциями</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13L9">[T13L9]</a> - Урок 9. Spring Cloud. Микросервисная архитектура</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13L10">[T13L10]</a> - Урок 10. Spring Testing. JUnit и Mockito для написания тестов</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13L11">[T13L11]</a> - Урок 11. Spring Actuator. Настройка мониторинга с Prometheus и Grafana</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13L12">[T13L12]</a> - Урок 12. Паттерны проектирования и GoF паттерны в Spring приложении</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13S1">[T13S1]</a> - Урок 1. Системы сборки Maven и Gradle для разработки Java приложений</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13S2">[T13S2]</a> - Урок 2. Основы Spring. Spring Boot</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13S3">[T13S3]</a> - Урок 3. Использование Spring для разработки серверного приложения</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13S4">[T13S4]</a> - Урок 4. Spring MVC. Использование шаблонизатора Thymeleaf</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13S5">[T13S5]</a> - Урок 5. Spring Data для работы с базами данных</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13S6">[T13S6]</a> - Урок 6. Проектирование и реализация API для серверного приложения</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13S7">[T13S7]</a> - Урок 7. Spring Security. Работа с JWT. Защита от основных видов атак</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13S8">[T13S8]</a> - Урок 8. Spring AOP, управление транзакциями</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13S9">[T13S9]</a> - Урок 9. Spring Cloud. Микросервисная архитектура</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13S10">[T13S10]</a> - Урок 10. Spring Testing. JUnit и Mockito для написания тестов</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13S11">[T13S11]</a> - Урок 11. Spring Actuator. Настройка мониторинга с Prometheus и Grafana</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T13/T13S12">[T13S12]</a> - Урок 12. Паттерны проектирования и GoF паттерны в Spring приложении</li>
+    </blockquote>
+    </details>
+    <i>Spring, сборка проекта springboot initilizer, зависимости</i>
+</blockquote></details>
+
+<details><summary><b>T14 - Базы данных и SQL</b></summary><blockquote>
+    <details><summary><U>Лекции</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T14/T14L1">[T14L1]</a> - Урок 1. Инструменты для работы с базами данных</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T14/T14L2">[T14L2]</a> - Урок 2. SQL – создание объектов, изменение данных, логические операторы</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T14/T14L3">[T14L3]</a> - Урок 3. SQL – выборка данных, сортировка, агрегатные функции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T14/T14L4">[T14L4]</a> - Урок 4. SQL – объединение таблиц union, соединение - join, подзапросы</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T14/T14L5">[T14L5]</a> - Урок 5. SQL – оконные функции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T14/T14L6">[T14L6]</a> - Урок 6. SQL – Транзакции, ACID. Временные таблицы, управляющие конструкции, циклы</li>
+    </blockquote></details>
+    <details><summary><u>Семинары</u></summary><blockquote>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T14/T14S1">[T14S1]</a> - Урок 1. SQL: получение данных</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T14/T14S2">[T14S2]</a> - Урок 2. SQL: Группировка, агрегатные функции, подзапросы</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T14/T14S3">[T14S3]</a> - Урок 3. SQL: Объединение таблиц</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T14/T14S4">[T14S4]</a> - Урок 4. SQL: Оконные функции</li>
+        <li><a href="https://github.com/mgrom-dev/gb/tree/main/T14/T14S5">[T14S5]</a> - Урок 5. SQL: Создание таблиц и представлений</li>
+    </blockquote>
+    </details>
+    <i>Работа с запросами, базы данных SQL</i>
+</blockquote></details>
+
 ----------
 ### Используемые материалы: ###
 -   <details><summary><b>Литература</b></summary><blockquote>
@@ -259,6 +331,7 @@
     <a href="https://metanit.com/">сайт по программированию</a> - справочные материалы для программистов по: asm, c#, c, c++, java, web, python, sql, mongoDB, go, vb.net, swift, kotlin, dart, php, rust, f#<br>
     <a href="https://leetcode.com/">leetcode</a> - cайт с различными задачами с собеседований и автотестами<br>
     <a href="https://edabit.com/challenges">edabit</a> - cайт с интерактивными задачами C#, C++, Java, JS, PHP, Ruby, Python, Swift<br>
+    <a href="https://sqliteonline.com/">SQLiteonline</a> - онлайн тестирование БД<br>
     <u><b>Онлайн тренажеры метода слепой печати:</b></u><br>
     &emsp;<a href="https://typerun.top/#rus_basic">TypeRun</a><br>
     &emsp;<a href="https://www.typingstudy.com/">TypingStudy</a><br>
